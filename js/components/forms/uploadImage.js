@@ -35,6 +35,7 @@ export default async function uploadImage() {
     try {
         const response = await fetch(url, options);
         const json = await response.json();
+        console.log(json[0])
         if (response.ok) {
             verifyLoader.style.display = "none";
             verifyBtn.classList.add = "verify__success";

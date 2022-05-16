@@ -9,7 +9,9 @@ export async function editProduct(title, description, price, alt, featured, id) 
     const imageUploadId = document.querySelector("#image__id");
     const newImageId = imageUploadId.value;
     const editForm = document.querySelector(".edit__product__form");
-    console.log(newImageId);
+    const currentImage = document.querySelector(".preview__img")
+    const previewNewImgContainer = document.querySelector(".preview__new__img__container")
+
     const formData = new FormData(editForm);
     const body = new FormData();
 
@@ -34,7 +36,8 @@ export async function editProduct(title, description, price, alt, featured, id) 
             displayMessage("success", MESSAGES.productEdited, ".message__container");
             window.scrollTo(0, 0)
             const newProductImage = json.data.attributes.Image.data.attributes.url;
-            console.log(newProductImage)
+            currentImage.src = `${json.data.attributes.Image.data.attributes.url}`
+            previewNewImgContainer.innerHTML = "";
 
             const currentProductsInBasket = getProductFromBasket();
             const productExistInBasket = currentProductsInBasket.find((product) => {
