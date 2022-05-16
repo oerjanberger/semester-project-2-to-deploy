@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Here you can see all the products you have marked as favorites. You can also remove the products from your favorites">
+    <script src="https://kit.fontawesome.com/591f5bf3d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ufr7cbx.css">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Baby Bliss | My Favorites</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="navbar__container">
+                <div class="nav__list__container">
+                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
+                            aria-label="Navigation menu"></i></label>
+                    <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
+                    <nav class="nav">
+                    </nav>
+                </div>
+                <div class="nav__logo__container">
+                    <a href="index.html"><img src="logo/Logo_svg.svg" alt="Baby Bliss logo" class="nav__logo"></a>
+                </div>
+                <div class="alt__nav__container">
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="container">
+                <div class="content__wrapper"></div>
+                <h1>Your favorites</h1>
+                <div class="loading__products"></div>
+                <div class="message__container"></div>
+                <div class="favorite__grid"></div>
+                <div class="all__products__btn__container">
+                    <a href="products.html" class="all__products__link__container">
+                        <p>View all products</p> <img src="./logo/Stork_SVG.svg" alt="Babybliss stork logo"
+                            class="logo__btn">
+                    </a>
+                </div>
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <div class="modal__logo"></div>
+                        <hr>
+                        <div class="modal__message"></div>
+                        <div class="basket__btn__container">
+                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
+                                aria-label="cancel"><span>Cancel</span></button>
+                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
+                                aria-label="confirm"><span>Confirm</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <footer>
+        <div class="footer__social__container">
+            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+        </div>
+        <div class="footer__info__container">
+            <h4>Company & Customer Care</h4>
+            <a href="about.html">
+                <p>About Us</p>
+            </a>
+            <a href="">
+                <p>Contact Us</p>
+            </a>
+            <a href="">
+                <p>Shipping & Delivery</p>
+            </a>
+            <a href="">
+                <p>Terms & Conditions</p>
+            </a>
+            <a href="">
+                <p>Returns & Exchanges</p>
+            </a>
+        </div>
+    </footer>
+    <script src="js/favorites.js" type="module"></script>
+</body>
+
+</html>

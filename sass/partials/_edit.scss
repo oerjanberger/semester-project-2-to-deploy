@@ -1,0 +1,59 @@
+.preview__img__container,
+.preview__new__img__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.preview__img {
+    max-width: 300px;
+    object-fit: cover;
+    margin: 5px 0px 20px 0px;
+}
+
+.image__input__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.verify__image__loader {
+    display: none;
+    border: 6px dotted getColour(textcolourprimary);
+    border-top: 3px solid getColour(backgroundwhite);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+    animation: spin 2500ms linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fa-check {
+    font-size: 1.3rem;
+    color: getColour(textcolourprimary);
+}
+
+@media(min-width: 1000px) {
+    .edit__img__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .image__input__container {
+        gap: 20px;
+    }
+
+    .preview__container {
+        display: flex;
+        gap: 100px;
+    }
+}

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0 auto;
+    background: getColour(backgroundwhite);
+    color: getColour(textcolourprimary);
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 0 2.4rem;
+    margin: 0 auto;
+}
+
+.content__wrapper {
+    margin-top: 130px;
+}
+
+a {
+    text-decoration: none;
+    color: getColour(textcolourprimary);
+}
+
+i {
+    color: getColour(textcolourprimary);
+    font-size: 1.3rem;
+}
+
+i :hover {
+    cursor: pointer;
+}
+
+.fa-heart {
+    color: getColour(primaryred);
+}

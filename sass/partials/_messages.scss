@@ -1,0 +1,41 @@
+.message__container {
+    max-width: 100%;
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0px;
+    font-family: $font-heading;
+}
+
+.error {
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: 2px solid getColour(primaryred);
+
+    @media(min-width: 720px) {
+        border: 4px solid getColour(primaryred);
+    }
+}
+
+.warning {
+    margin-top: 0px;
+    padding: 0px;
+    color: getColour(primaryred);
+}
+
+.form__warning {
+    color: getColour(textcoloursecondary);
+    background-color: getColour(highlightorange);
+}
+
+.success {
+    color: getColour(textcoloursecondary);
+    background-color: getColour(secondaryturquoise);
+
+    @media(min-width: 720px) {
+        font-size: 1.3rem;
+        padding: 20px;
+        text-align: center;
+    }
+}

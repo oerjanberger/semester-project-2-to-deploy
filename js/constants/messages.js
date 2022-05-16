@@ -1,0 +1,23 @@
+const MESSAGES = {
+    emptyBasket: "No products added to the basket yet.",
+    noResult: "No products found.",
+    noSearch: "No search word found.",
+    noFavorites: "No products added to favorites yet.",
+    nobasket: "No products added to the basket yet.",
+    noMoreProducts: "Unfortunately we have no more products",
+    noUsername: "Username is missing or incorrect",
+    noPassword: "Password is missing or incorrect",
+    wrongLogin: "Username or Password is incorrect",
+    titleError: "Title not enough characters",
+    descriptionError: "Description not enough characters",
+    priceError: "Price is missing or not correct format",
+    imageError: "Image is missing or not correct format",
+    verifyError: "We were not able to verify the image, if image is correct format, try to logout and login again",
+    imageAltError: "Image alternative text is missing",
+    productCreated: "The product was successfully added",
+    productEdited: "The product was successfully edited",
+    productAddedToBasket: "The product was successfully added to the Basket",
+    inputMissing: "There is one or more inputs that has an error, see more info below",
+    error: "Unfortunately there occurred an error, we are working hard to fix it",
+};
+export default MESSAGES;

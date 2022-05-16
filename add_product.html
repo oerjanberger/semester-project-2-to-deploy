@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="On this page an admin user can add products to be shown on the website">
+    <script src="https://kit.fontawesome.com/591f5bf3d7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ufr7cbx.css">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Baby Bliss | Add products</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="navbar__container">
+                <div class="nav__list__container">
+                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
+                            aria-label="Navigation menu"></i></label>
+                    <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
+                    <nav class="nav">
+                    </nav>
+                </div>
+                <div class="nav__logo__container">
+                    <a href="index.html"><img src="logo/Logo_svg.svg" alt="Baby Bliss logo" class="nav__logo"></a>
+                </div>
+                <div class="alt__nav__container">
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="container">
+                <div class="content__wrapper">
+                    <a href="products.html" class="all__products__link__container back_btn"><i
+                            class="fas fa-angle-left back__arrow"></i>
+                        <p>Back to all products</p>
+                    </a>
+                    <h1>Add product </h1>
+                    <div class="message__container"></div>
+                    <form class="add__product__form" id="createProduct">
+                        <div class="input__container">
+                            <label for="title">Product title</label>
+                            <input type="text" name="Title" id="title" class="title">
+                            <p class="helper__text">Minimum 5 characters</p>
+                            <div class="title__error"></div>
+                        </div>
+                        <div class="input__container">
+                            <label for="description">Description</label>
+                            <textarea name="Description" id="description" class="description"></textarea>
+                            <p class="helper__text">Minimum 20 characters</p>
+                            <div class="description__error"></div>
+                        </div>
+                        <div class="input__container">
+                            <label for="price">Price</label>
+                            <input type="text" name="Price" id="price" class="price">
+                            <p class="helper__text">Only numbers and must have 2 decimals ex: 99.89</p>
+                            <div class="price__error"></div>
+                        </div>
+                        <div class="input__container">
+                            <label for="image">Upload image</label>
+                            <input type="file" name="files.Image" id="image" class="image">
+                            <p class="helper__text">Must be a JPG, JPEG or PNG image. Max 200mb</p>
+                            <div class="image__error"></div>
+                        </div>
+                        <div class="input__container">
+                            <label for="image__alt">Image alternative text</label>
+                            <input type="text" name="Image_alt_text" id="image__alt" class="image__alt">
+                            <p class="helper__text">Explain the image for those who can't see it!</p>
+                            <div class="image__alt__error"></div>
+                        </div>
+                        <label>Featured</label>
+                        <div class="featured__icon__container">
+                            <i class="fas fa-check-circle featured__yes featured__icon"></i>
+                            <i class="fas fa-times-circle featured__no featured__icon"></i>
+                            <input type="checkbox" name="Featured" id="featured" class="featured__checkbox">
+                        </div>
+                        <button class="standard__cta__btn form__btn">Add product</button>
+                    </form>
+                </div>
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <div class="modal__logo"></div>
+                        <hr>
+                        <div class="modal__message"></div>
+                        <div class="basket__btn__container">
+                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
+                                aria-label="cancel"><span>Cancel</span></button>
+                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
+                                aria-label="confirm"><span>Confirm</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <footer>
+        <div class="footer__social__container">
+            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+        </div>
+        <div class="footer__info__container">
+            <h4>Company & Customer Care</h4>
+            <a href="about.html">
+                <p>About Us</p>
+            </a>
+            <a href="">
+                <p>Contact Us</p>
+            </a>
+            <a href="">
+                <p>Shipping & Delivery</p>
+            </a>
+            <a href="">
+                <p>Terms & Conditions</p>
+            </a>
+            <a href="">
+                <p>Returns & Exchanges</p>
+            </a>
+        </div>
+    </footer>
+    <script src="js/addProduct.js" type="module"></script>
+</body>
+
+</html>

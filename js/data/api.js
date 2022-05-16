@@ -1,0 +1,1 @@
+export const baseUrl = "https://orjan-berger-semester-project2.herokuapp.com/api/"

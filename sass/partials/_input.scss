@@ -1,0 +1,47 @@
+.filter__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .filter {
+        margin-top: 10px;
+        min-width: 250px;
+        max-width: 250px;
+    }
+}
+
+input,
+textarea {
+    border: 3px solid getColour(highlightorange);
+    height: 45px;
+    font-size: 0.9rem;
+
+    &:focus {
+        outline: none;
+        border: 3px solid getColour(secondaryturquoise);
+    }
+}
+
+input[type=file]::file-selector-button {
+    height: inherit;
+    width: 70px;
+    border: none;
+    border-right: 2px solid getColour(highlightorange);
+    background-color: getColour(backgroundwhite);
+    font-family: $font-primary;
+    padding-bottom: 5px;
+}
+
+input[type=file]::file-selector-button:hover {
+    cursor: pointer;
+    background-color: getColour(secondaryturquoise);
+    font-weight: bold;
+}
+
+@media(min-width: 1000px) {
+    .filter__grid {
+        display: flex;
+        justify-content: end;
+    }
+
+}

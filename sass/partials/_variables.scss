@@ -1,0 +1,38 @@
+$font-heading: "lato",
+    sans-serif;
+
+$font-primary: open-sans,
+    sans-serif;
+
+$font-button: ff-uberhand-pro,
+    sans-serif;
+
+$colours: (
+    primaryred: #E28D8D,
+    secondaryturquoise: #B2C6BD,
+    tertiarygreen: #CFD0C3,
+    highlightorange: #D4A591,
+    backgroundwhite: #F7F1F1,
+    backgroundwhitetransparent: #f7f1f1ad,
+    textcolourprimary: #423F38,
+    textcoloursecondary: #262421
+);
+
+$navColour: #B2C6BD 0%,
+    #B2C6BD 50%,
+    rgba(247, 241, 241, 0.8) 75%,
+    rgba(247, 241, 241, 0.5) 100%;
+
+$navListColour: #B2C6BD 0%,
+    #B2C6BD 20%,
+    rgba(178, 198, 189, 0.8) 40%,
+    rgba(178, 198, 189, 0.5) 100%;
+
+$navColourScroll: #B2C6BD 0%,
+    #B2C6BD 50%,
+    #F7F1F1 75%,
+    #F7F1F1 100%;
+
+@function getColour($colour) {
+    @return map-get($colours, $colour);
+}

@@ -1,0 +1,32 @@
+.pagination__container {
+    display: none;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    .pages__container p {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .fa-chevron-left {
+        display: none;
+    }
+
+    .page__arrow {
+        align-self: center;
+        border: 1px solid getColour(textcolourprimary);
+        border-radius: 50%;
+        padding: 4px 10px;
+        color: getColour(textcolourprimary);
+        background-color: getColour(backgroundwhite);
+        font-size: 1.5rem;
+
+        :hover {
+            color: getColour(backgroundwhite);
+            background-color: getColour(textcolourprimary);
+        }
+    }
+
+}
