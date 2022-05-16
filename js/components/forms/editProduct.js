@@ -7,18 +7,23 @@ export async function editProduct(title, description, price, alt, featured, id) 
     const url = `${baseUrl}products/${id}?populate=*`;
     const token = getToken();
     const imageUploadId = document.querySelector("#image__id");
-    const newImageId = imageUploadId.value;
+    const newImageId = parseFloat(imageUploadId.value);
     const editForm = document.querySelector(".edit__product__form");
     const currentImage = document.querySelector(".preview__img")
     const previewNewImgContainer = document.querySelector(".preview__new__img__container")
 
     const formData = new FormData(editForm);
     const body = new FormData();
+    console.log(newImageId)
+    let data = JSON.stringify({ Title: title, Description: description, Price: price, Image_alt_text: alt, Featured: featured });
 
-    const file = formData.get("files.Image");
-    body.append("files.Image", file);
-    formData.delete("files.Image");
-    const data = JSON.stringify({ Title: title, Description: description, Price: price, Image: newImageId, Image_alt_text: alt, Featured: featured });
+    if (typeof newImageId === "number") {
+        const file = formData.get("files.Image");
+        body.append("files.Image", file);
+        formData.delete("files.Image");
+        data = JSON.stringify({ Title: title, Description: description, Price: price, Image: newImageId, Image_alt_text: alt, Featured: featured });
+    }
+
     body.append("data", data);
 
     const options = {
@@ -31,7 +36,6 @@ export async function editProduct(title, description, price, alt, featured, id) 
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json);
         if (json.data.attributes.updatedAt) {
             displayMessage("success", MESSAGES.productEdited, ".message__container");
             window.scrollTo(0, 0)
@@ -72,10 +76,12 @@ export async function editProduct(title, description, price, alt, featured, id) 
         }
         if (json.data.attributes.error) {
             console.log(json.data.attributes.message)
+            window.scrollTo(0, 0)
             displayMessage("error", MESSAGES.error, ".message__container")
         }
     } catch (error) {
         console.log(error);
+        window.scrollTo(0, 0)
         displayMessage("error", MESSAGES.error, ".message__container");
     }
 }

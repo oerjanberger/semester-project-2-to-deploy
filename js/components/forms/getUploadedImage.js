@@ -10,7 +10,6 @@ export default async function getUploadedImage(imageId) {
         const response = await fetch(uploadedImageUrl, { headers });
         const image = await response.json();
         populateWithNewImage(image)
-        console.log(image)
     } catch (error) {
         console.log(error)
     }
