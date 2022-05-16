@@ -1,5 +1,5 @@
-Baby Bliss
-This is the ecommerce that I created for the Semester Project 2 at Noroff
+Baby Bliss e-commerce site
+This is the e-commerce that I created for the Semester Project 2 at Noroff
 
 
 Semester Project 2
