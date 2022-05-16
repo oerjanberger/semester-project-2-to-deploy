@@ -14,10 +14,10 @@ export async function editProduct(title, description, price, alt, featured, id) 
 
     const formData = new FormData(editForm);
     const body = new FormData();
-    console.log(newImageId)
+
     let data = JSON.stringify({ Title: title, Description: description, Price: price, Image_alt_text: alt, Featured: featured });
 
-    if (typeof newImageId === "number") {
+    if (newImageId) {
         const file = formData.get("files.Image");
         body.append("files.Image", file);
         formData.delete("files.Image");
@@ -36,6 +36,7 @@ export async function editProduct(title, description, price, alt, featured, id) 
     try {
         const response = await fetch(url, options);
         const json = await response.json();
+        console.log(json)
         if (json.data.attributes.updatedAt) {
             displayMessage("success", MESSAGES.productEdited, ".message__container");
             window.scrollTo(0, 0)
