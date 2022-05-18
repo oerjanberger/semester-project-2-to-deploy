@@ -578,10 +578,15 @@ button:hover,
   font-size: 1.3rem;
   border: 2px solid #D4A591;
   width: 300px;
+  height: 64px;
 }
 
 .all__products__link__container .logo__btn {
   max-width: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding-bottom: 10px;
 }
 
 .all__products__link__container:hover {
@@ -596,6 +601,7 @@ button:hover,
 
 .all__products__link__container:hover .flying__logo {
   max-width: 50px;
+  padding-top: 20px;
 }
 
 .back_btn {
@@ -1313,7 +1319,8 @@ hr {
 }
 
 .preview__img {
-  max-width: 300px;
+  width: 300px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 5px 0px 20px 0px;
