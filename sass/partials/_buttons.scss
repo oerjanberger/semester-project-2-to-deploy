@@ -20,6 +20,10 @@ button:hover,
     content: url(../../logo/small_flying_stork.svg);
 }
 
+.standard__cta__btn:hover::after span {
+    display: block;
+}
+
 .standard__cta__btn:hover {
     padding-top: 7px;
     border: 2px solid getColour(textcolourprimary);
