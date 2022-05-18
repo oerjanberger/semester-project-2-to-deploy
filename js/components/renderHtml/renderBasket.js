@@ -28,10 +28,10 @@ export default function renderBasket() {
 
         basketContainer.innerHTML += `<div class="basket__card">
                                         <div class="basket__img__container">
-                                            <a href=""href="product_details.html?id=${product.id}"><img src="${product.image}" alt="${product.alt}" class="basket__img"></a>
+                                            <a href="product_details.html?id=${product.id}"><img src="${product.image}" alt="${product.alt}" class="basket__img"></a>
                                         </div>
                                         <div class="basket__info__container">
-                                        <a href=""href="product_details.html?id=${product.id}"><h5>${product.title}</h5></a>
+                                        <a href="product_details.html?id=${product.id}"><h5>${product.title}</h5></a>
                                             <i class="fas fa-trash product__trash" data-id="${product.id}" aria-label="remove ${product.title} from basket"></i>
                                             <div class="counter__container">
                                                 <i class="fas fa-minus counter__icon" data-id="${product.id}" aria-label="reduce number of ${product.title} from basket by 1"></i>
