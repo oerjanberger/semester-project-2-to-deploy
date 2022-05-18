@@ -21,10 +21,15 @@ export default async function uploadImage() {
 
     const formData = new FormData();
 
-    if (imageInput.files.length > 0 && !imageFault) {
+    if (imageFault) {
+        verifyBtn.innerHTML = `<div class="verify__image__loader"></div><span class="verify__btn__text">Verify
+        image</span>`
+        displayMessage("warning", MESSAGES.imageError, ".image__error")
+    } else {
         formData.append("files", imageFile, imageFile.name);
         imageError.innerHTML = "";
     }
+
     const options = {
         method: "POST",
         body: formData,
@@ -45,6 +50,7 @@ export default async function uploadImage() {
 
     } catch (error) {
         console.log(error);
+        window.scrollTo(0, 0)
         displayMessage("error", MESSAGES.error, ".message__container");
         displayMessage("error", MESSAGES.verifyError, ".image__error");
     }

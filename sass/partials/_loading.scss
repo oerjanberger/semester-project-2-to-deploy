@@ -11,14 +11,14 @@
 }
 
 .loading__symbol__one {
-    animation: 5000ms flyingAnimation ease-in-out infinite;
+    animation: 4000ms flyingAnimation ease-in-out infinite;
     opacity: 0;
 }
 
 .loading__symbol__two {
-    animation: 5000ms flyingAnimation ease-in-out infinite;
+    animation: 4000ms flyingAnimation ease-in-out infinite;
     opacity: 0;
-    animation-delay: 1250ms;
+    animation-delay: 1000ms;
     position: absolute;
     top: 26px;
 }

@@ -33,7 +33,7 @@ export default function renderFavorites() {
             <div class="product__img__container"><img src="${product.image}" alt="${product.alt}" class="product__image"></div>
             <div class="product__card__info">
                 <h3>${product.title}</h3>
-                <p class="product__card__price">NOK ${favoritesPrice},-</p>
+                <p class="product__card__price">NOK ${favoritesPrice}</p>
             </div>
         </a>
         <div class="button__container">

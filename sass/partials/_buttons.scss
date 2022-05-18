@@ -46,6 +46,7 @@ button:hover,
     border: 2px solid getColour(highlightorange);
     width: 300px;
     height: 64px;
+    background-color: getColour(backgroundwhite);
 
     .logo__btn {
         max-width: 50px;

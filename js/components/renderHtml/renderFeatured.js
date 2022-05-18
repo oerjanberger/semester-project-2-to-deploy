@@ -49,7 +49,7 @@ export default function renderFeatured(products) {
                     <div class="product__img__container"><img src="${productImage}" alt="${productImageAlt}" class="product__image"></div>
                     <div class="product__card__info">
                         <h3>${productTitle}</h3>
-                        <p class="product__card__price">NOK ${productPrice},-</p>
+                        <p class="product__card__price">NOK ${productPrice}</p>
                     </div>
                 </a>
                 <div class="button__container">

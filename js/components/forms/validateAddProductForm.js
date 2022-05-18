@@ -52,7 +52,7 @@ export default function validateAddProductForm(event) {
         validForm = false;
         window.scrollTo(0, 0)
     };
-    if (image.files.length === 0 || imageFile.size > 200000000 || imageFile.type !== "image/jpeg" && imageFile.type !== "image/jpg" && imageFile.type !== "image/png") {
+    if (image.files.length === 0 || imageFile.size > 200000 || imageFile.type !== "image/jpeg" && imageFile.type !== "image/jpg" && imageFile.type !== "image/png") {
         displayMessage("warning", MESSAGES.imageError, ".image__error");
         displayMessage("form__warning", MESSAGES.inputMissing, ".message__container");
         validForm = false;

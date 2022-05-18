@@ -11,7 +11,7 @@ const MESSAGES = {
     titleError: "Title not enough characters",
     descriptionError: "Description not enough characters",
     priceError: "Price is missing or not correct format",
-    imageError: "Image is missing or not correct format",
+    imageError: "Image is missing, not correct format or to many megabyte",
     verifyError: "We were not able to verify the image, if image is correct format, try to logout and login again",
     imageAltError: "Image alternative text is missing",
     productCreated: "The product was successfully added",

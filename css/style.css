@@ -153,6 +153,10 @@ header {
   font-size: 1.3rem;
 }
 
+.nav__list li:hover {
+  text-decoration: underline;
+}
+
 .basket__icon__container {
   max-height: 23px;
 }
@@ -441,17 +445,17 @@ footer {
 }
 
 .loading__symbol__one {
-  -webkit-animation: 5000ms flyingAnimation ease-in-out infinite;
-          animation: 5000ms flyingAnimation ease-in-out infinite;
+  -webkit-animation: 4000ms flyingAnimation ease-in-out infinite;
+          animation: 4000ms flyingAnimation ease-in-out infinite;
   opacity: 0;
 }
 
 .loading__symbol__two {
-  -webkit-animation: 5000ms flyingAnimation ease-in-out infinite;
-          animation: 5000ms flyingAnimation ease-in-out infinite;
+  -webkit-animation: 4000ms flyingAnimation ease-in-out infinite;
+          animation: 4000ms flyingAnimation ease-in-out infinite;
   opacity: 0;
-  -webkit-animation-delay: 1250ms;
-          animation-delay: 1250ms;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
   position: absolute;
   top: 26px;
 }
@@ -579,6 +583,7 @@ button:hover,
   border: 2px solid #D4A591;
   width: 300px;
   height: 64px;
+  background-color: #F7F1F1;
 }
 
 .all__products__link__container .logo__btn {
@@ -1305,6 +1310,10 @@ hr {
 
 .featured__icon__container .featured__icon {
   font-size: 2.4rem;
+}
+
+.featured__icon:hover {
+  cursor: pointer;
 }
 
 .preview__img__container,

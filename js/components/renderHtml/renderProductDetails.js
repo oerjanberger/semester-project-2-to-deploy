@@ -42,7 +42,7 @@ export default function renderProductDetails(product) {
             <div class="product__detail__info">
                 <h2>Product description</h2>
                 <p>${productDescription}</p>
-                <p class="product__detail__price">Nok ${productPrice},-</p>     
+                <p class="product__detail__price">Nok ${productPrice}</p>     
             </div>
             <button class="standard__cta__btn add__to__basket" data-id="${product.id}" data-title="${productTitle}" data-price="${productPrice}" data-image="${productImage}" data-alt="${productImageAlt}"><span>Add to basket</span></button>
         </div>`;
