@@ -8,6 +8,7 @@ import renderProducts from "../renderHtml/renderProducts.js";
 export default function filterProducts() {
     const filterInput = document.querySelector(".filter");
     const filterMessageContainer = document.querySelector(".filter__message__container");
+    const messageContainer = document.querySelector(".message__container");
 
     filterInput.onkeyup = function () {
         const filterValue = filterInput.value.trim().toLowerCase();
@@ -16,6 +17,7 @@ export default function filterProducts() {
 
         if (!filterValue) {
             filterMessageContainer.style.display = "none";
+            messageContainer.style.display = "none"
         } else {
             (async function searchProducts() {
                 const searchUrl = baseUrl + "products?pagination[page]=1&pagination[pageSize]=100&populate=*";

@@ -4,10 +4,12 @@ import { getProductFromFavorites, getToken } from "../../utils/storage.js";
 import addProductToFavorites from "../buttons/addProductToFavorites.js";
 
 export default function renderProducts(products) {
+    const allProductsContainer = document.querySelector(".all__products__grid");
     if (products.length === 0) {
+        allProductsContainer.innerHTML = "";
         return displayMessage("warning", MESSAGES.noResult, ".message__container");
     }
-    const allProductsContainer = document.querySelector(".all__products__grid");
+
     allProductsContainer.innerHTML = "";
 
     products.forEach(function (product) {
