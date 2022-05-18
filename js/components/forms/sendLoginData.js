@@ -34,3 +34,4 @@ export default async function sendLoginData(username, password) {
         displayMessage("error", MESSAGES.error, ".")
     }
 }
+
