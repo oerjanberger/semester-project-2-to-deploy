@@ -65,6 +65,10 @@ header {
     font-size: 1.3rem;
 }
 
+.nav__list li:hover {
+    text-decoration: underline;
+}
+
 .basket__icon__container {
     max-height: 23px;
 }
