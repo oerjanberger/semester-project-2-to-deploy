@@ -45,9 +45,12 @@ button:hover,
     font-size: 1.3rem;
     border: 2px solid getColour(highlightorange);
     width: 300px;
+    height: 64px;
 
     .logo__btn {
         max-width: 50px;
+        align-self: center;
+        padding-bottom: 10px;
     }
 }
 
@@ -61,6 +64,7 @@ button:hover,
 
     .flying__logo {
         max-width: 50px;
+        padding-top: 20px;
     }
 }
 
