@@ -3,12 +3,23 @@
     flex-direction: column;
 }
 
+.about__img__container {
+    align-self: center;
+}
+
 .about__img {
-    max-width: 300px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .intro__about {
     font-weight: bold;
+}
+
+.about__social__container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
 }
 
 .about__social {
@@ -34,7 +45,7 @@
     }
 }
 
-@media(min-width: 880px) {
+@media(min-width: 720px) {
     .about__grid {
         display: grid;
         grid-template-columns: 1fr 1fr;

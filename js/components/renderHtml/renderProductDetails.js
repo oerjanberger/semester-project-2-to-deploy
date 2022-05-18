@@ -1,4 +1,4 @@
-import { getProductFromFavorites } from "../../utils/storage.js";
+import { getProductFromFavorites, getToken } from "../../utils/storage.js";
 import addProductToFavorites from "../buttons/addProductToFavorites.js";
 import addProductToBasket from "../buttons/addProductToBasket.js";
 import imageModal from "../modals/imageModal.js";
@@ -10,6 +10,7 @@ export default function renderProductDetails(product) {
     const productImageAlt = product.attributes.Image.data.attributes.alternativeText
     const productTitle = product.attributes.Title;
     const productPrice = product.attributes.Price;
+    const token = getToken();
 
     let cssClass = "far";
     let heartAriaLabel = "add"
@@ -24,6 +25,13 @@ export default function renderProductDetails(product) {
         heartAriaLabel = "remove"
         heartAriaLabelCont = "from my favorites"
     };
+
+    if (token) {
+        var productButtons = `<a href="edit.html?id=${product.id}"><button class="standard__cta__btn edit__btn" data-id="${product.id}" data-title="${productTitle}" data-price="${productPrice}" data-image="${productImage}" data-alt="${productImageAlt}">Edit product</button></a>
+        <button class="standard__cta__btn add__to__basket" data-id="${product.id}" data-title="${productTitle}" data-price="${productPrice}" data-image="${productImage}" data-alt="${productImageAlt}">Add to basket</button>`
+    } else if (!token) {
+        var productButtons = `<button class="standard__cta__btn add__to__basket product__details__btn" data-id="${product.id}" data-title="${productTitle}" data-price="${productPrice}" data-image="${productImage}" data-alt="${productImageAlt}">Add to basket</button>`
+    }
 
     productDetailsContainer.innerHTML += `
         <div class="loading__products"></div>
@@ -44,9 +52,8 @@ export default function renderProductDetails(product) {
                 <p>${productDescription}</p>
                 <p class="product__detail__price">Nok ${productPrice}</p>     
             </div>
-            <button class="standard__cta__btn add__to__basket" data-id="${product.id}" data-title="${productTitle}" data-price="${productPrice}" data-image="${productImage}" data-alt="${productImageAlt}"><span>Add to basket</span></button>
+            <div class="basket__btn__container product__details__btn__container">${productButtons}</div>
         </div>`;
-
     addProductToFavorites();
     addProductToBasket();
     imageModal();

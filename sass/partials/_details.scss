@@ -29,7 +29,7 @@
     transform: scale(1.05);
 }
 
-.add__to__basket {
+.product__details__btn {
     width: 100%;
 }
 
@@ -65,10 +65,19 @@
             }
         }
 
-        .add__to__basket {
+        .product__details__btn {
             height: 50px;
+
+        }
+
+        .product__details__btn__container {
             grid-column-start: 1;
             grid-column-end: 3;
+            justify-content: unset;
+
+            .standard__cta__btn {
+                width: 100%;
+            }
         }
     }
 }

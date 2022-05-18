@@ -1,12 +1,13 @@
 import MESSAGES from "../../constants/messages.js";
 import displayMessage from "../common/displayMessage.js";
-import { getToken, getProductFromFavorites } from "../../utils/storage.js";
+import { getToken, getProductFromFavorites, clearFavoritesFromStorage } from "../../utils/storage.js";
 import removeProductFromFavorites from "../buttons/removeProductFromFavorites.js";
 
 export default function renderFavorites() {
     const favorites = getProductFromFavorites();
     const favoritesContainer = document.querySelector(".favorite__grid");
     const favoriteMessage = document.querySelector(".message__container");
+    const clearFavoritesBtn = document.querySelector(".clear__favorites__btn")
     const token = getToken();
 
 
@@ -21,10 +22,10 @@ export default function renderFavorites() {
         const favoritesPrice = parseFloat(product.price);
         const favoritesId = parseFloat(product.id);
         if (token) {
-            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn"><span>View product</span></button></a>
-                                <a href="edit.html?id=${product.id}"><button class="standard__cta__btn edit__btn"><span>Edit product</span></button></a>`
+            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn">View product</button></a>
+                                <a href="edit.html?id=${product.id}"><button class="standard__cta__btn edit__btn">Edit product</button></a>`
         } else if (!token) {
-            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn"><span>View product</span></button></a>`
+            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn">View product</button></a>`
         }
 
         favoritesContainer.innerHTML += `<div class="product__card">
@@ -41,5 +42,6 @@ export default function renderFavorites() {
     </div>
     </div>`;
     });
+    clearFavoritesBtn.addEventListener("click", clearFavoritesFromStorage);
     removeProductFromFavorites()
 };

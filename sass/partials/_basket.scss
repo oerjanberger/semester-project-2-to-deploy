@@ -7,7 +7,8 @@
     order: 2;
 }
 
-.clearbtn {
+.clearbtn,
+.clear__favorites__btn {
     display: flex;
     align-items: center;
     border: 2px solid getColour(highlightorange);
@@ -18,8 +19,22 @@
     order: 1;
 }
 
+.clearbtn:hover,
+.clear__favorites__btn:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 3px getColour(primaryred);
+}
+
+.clear__favorites__btn {
+    width: 200px;
+}
+
 .clearbtn p {
     margin: 0px 10px 0px 10px;
+}
+
+.clear__favorites__btn p {
+    margin: 0px 20px 0px 10px;
 }
 
 .basket__grid {

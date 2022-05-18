@@ -12,26 +12,21 @@ button:hover,
     font-size: 1.2rem;
 }
 
-.standard__cta__btn:hover span {
-    display: none;
-}
-
-.standard__cta__btn:hover::before {
-    content: url(../../logo/small_flying_stork.svg);
-}
-
-.standard__cta__btn:hover::after span {
-    display: block;
-}
 
 .standard__cta__btn:hover {
-    padding-top: 7px;
     border: 2px solid getColour(textcolourprimary);
     background-color: getColour(backgroundwhite);
+    color: getColour(textcolourprimary);
+    font-weight: bold;
 }
 
 .edit__btn {
     background-color: getColour(tertiarygreen);
+    color: getColour(textcoloursecondary);
+}
+
+.delete__btn {
+    background-color: getColour(primaryred);
     color: getColour(textcoloursecondary);
 }
 
@@ -81,6 +76,10 @@ button:hover,
     .back__arrow {
         align-self: center;
         font-size: 1.6rem;
+    }
+
+    p {
+        align-self: center;
     }
 }
 

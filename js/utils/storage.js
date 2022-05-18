@@ -1,6 +1,7 @@
 import renderBasket from "../components/renderHtml/renderBasket.js";
 import { BASKET_KEY, FAVORITES_KEY, USERNAME, TOKEN_KEY } from "../constants/keys.js";
 import basketQuantityCounter from "../components/common/basketQuantityCounter.js";
+import renderFavorites from "../components/renderHtml/renderFavorites.js";
 
 export function saveToken(token) {
     saveToStorage(TOKEN_KEY, token);
@@ -66,6 +67,28 @@ export function clearBasketFromStorage() {
         localStorage.removeItem(BASKET_KEY);
         renderBasket();
         basketQuantityCounter()
+    });
+
+    cancelBtn.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+    });
+}
+
+export function clearFavoritesFromStorage() {
+    const modalContainer = document.querySelector(".modal__container");
+    const modalLogo = document.querySelector(".modal__logo");
+    const modalMessage = document.querySelector(".modal__message");
+    const cancelBtn = document.querySelector("#cancel__btn");
+    const confirmBtn = document.querySelector("#confirm__btn");
+
+    modalContainer.style.display = "block";
+    modalLogo.innerHTML = `<i class="fas fa-heart modal__favorite"></i>`;
+    modalMessage.innerHTML = `<p>Are you sure you want to remove all products from favorites?</p>`;
+
+    confirmBtn.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+        localStorage.removeItem(FAVORITES_KEY);
+        renderFavorites();
     });
 
     cancelBtn.addEventListener("click", () => {

@@ -1,8 +1,9 @@
-import { getUsername } from "../../utils/storage.js";
+import { getToken } from "../../utils/storage.js";
 import stickyNav from "./stickyNav.js";
 import navHeart from "./navHeart.js";
 import basketQuantityCounter from "./basketQuantityCounter.js";
 import logout from "../buttons/logout.js";
+import renderModalBasket from "../modals/renderModalBasket.js";
 
 export default function createNav() {
     stickyNav();
@@ -12,9 +13,7 @@ export default function createNav() {
     const hamburgerMenu = document.querySelector(".hamburger__label");
     const menuCheckbox = document.querySelector(".hamburger__menu__input");
     const altNavContainer = document.querySelector(".alt__nav__container");
-    const navLogo = document.querySelector(".nav__logo");
-    const getStyleAltNav = window.getComputedStyle(navLogo).getPropertyValue("max-width");
-    const username = getUsername();
+    const token = getToken();
 
     let authLink = `<li><a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">
                     Login</a><a href="login.html"><i class="fas fa-user-alt" aria-label="login"></i></a></li>`;
@@ -22,14 +21,14 @@ export default function createNav() {
     <a href="login.html"><i class="fas fa-user-alt" aria-label="login"></i></a>
 </li>`;
 
-    if (username) {
+    if (token) {
         authLink = `<li><a href="add_product.html" class="${pathname === "/add_product.html" ? "active" : ""}">Add Product</a><a href="add_product.html"><i class="fas fa-plus"></i></a></li>
         <li class="logout__btn">Logout<i class="fas fa-user-alt"></i></li>`;
-        if (getStyleAltNav === "110px") {
-            secondAuthlink = `<li><a href="add_product.html"><i class="fas fa-plus" aria-label="add product"></i></a></li>
+        if (screen.width >= 720) {
+            secondAuthlink = `<li class="alt__nav__add"><a href="add_product.html"><i class="fas fa-plus" aria-label="add product"></i></a></li>
             <li class="alt__nav__user logout__btn"><i class="fas fa-user-alt" aria-label="logout user"></i><div class="logout__user__x">X</div></li>`;
         } else {
-            secondAuthlink = `<li class="alt__nav__user logout__btn"><i class="fas fa-user-alt" aria-label="log out user"></i><div class="logout__user__x">X</div></li>`;
+            secondAuthlink = `<li class="alt__nav__user logout__btn "><i class="fas fa-user-alt" aria-label="log out user"></i><div class="logout__user__x">X</div></li>`;
         }
 
     }
@@ -50,6 +49,20 @@ export default function createNav() {
                                         <li class="alt__nav__basket">
                                             <a href="basket.html"><i class="fas fa-shopping-bag" aria-label="shopping basket"></i></a>
                                             <div class="basket__count"></div>
+                                            <div class="minibasket__modal__container">
+                                                <div class="minibasket__products__container"></div>
+                                                <hr>
+                                                <div class="minibasket__modal__total__container">
+                                                    <h3>Total sum:</h3>
+                                                    <p class="minibasket__modal__total__sum"></p>
+                                                </div>
+                                                <div class="basket__btn__container">
+                                                    <a href="basket.html"><button class="standard__cta__btn modal__btn"
+                                                            aria-label="cancel">Basket</button></a>
+                                                    <a><button class="standard__cta__btn edit__btn modal__btn"
+                                                            aria-label="confirm">Checkout</button></a>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li class="alt__nav__favorites">
                                             <a href="favorites.html"><i class="far fa-heart nav__heart" aria-label="my favorites"></i></a>
@@ -66,7 +79,8 @@ export default function createNav() {
             navContainer.style.display = "none"
         }
     };
-    logout()
     basketQuantityCounter();
+    renderModalBasket()
+    logout()
 }
 

@@ -21,10 +21,10 @@ export default function renderProducts(products) {
         const token = getToken();
 
         if (token) {
-            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn"><span>View product</span></button></a>
-                                <a href="edit.html?id=${product.id}"><button class="standard__cta__btn edit__btn"><span>Edit product</span></button></a>`
+            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn">View product</button></a>
+                                <a href="edit.html?id=${product.id}"><button class="standard__cta__btn edit__btn">Edit product</button></a>`
         } else if (!token) {
-            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn"><span>View product</span></button></a>`
+            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn">View product</button></a>`
         }
 
         let cssClass = "far";

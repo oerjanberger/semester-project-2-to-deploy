@@ -29,12 +29,26 @@ body {
 
 .container {
   max-width: 1000px;
-  padding: 0 2.4rem;
+  padding: 0px 40px;
   margin: 0 auto;
+}
+
+.content__wrapper,
+.content__wrapper__index {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
 }
 
 .content__wrapper {
   margin-top: 130px;
+}
+
+.heading__container {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 300px;
 }
 
 a {
@@ -53,6 +67,18 @@ i :hover {
 
 .fa-heart {
   color: #E28D8D;
+}
+
+@media (min-width: 720px) and (max-width: 1000px) {
+  .heading__container {
+    width: 630px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .heading__container {
+    width: 960px;
+  }
 }
 
 h1,
@@ -122,7 +148,8 @@ header {
   font-size: 1.6rem;
 }
 
-.hamburger__label :hover {
+.hamburger__label:hover,
+.basket__count:hover {
   cursor: pointer;
 }
 
@@ -194,8 +221,22 @@ header {
       justify-content: space-around;
   list-style: none;
   padding-left: 0px;
-  margin-top: 35px;
-  margin-right: 0px;
+  height: 100%;
+  margin: 0px;
+}
+
+.alt__nav__favorites,
+.alt__nav__user,
+.alt__nav__add {
+  height: 22px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.alt__nav__basket {
+  height: 100%;
+  padding-top: 40px;
 }
 
 .basket__count,
@@ -224,14 +265,16 @@ header {
 
 @media (min-width: 880px) {
   .navbar__container i {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
   .hamburger__label {
     padding: 40px 55px;
-    font-size: 2.3rem;
+  }
+  .nav {
+    min-width: 300px;
   }
   .nav__list li {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .nav__logo {
     max-width: 110px;
@@ -247,16 +290,20 @@ header {
     width: 250px;
     margin-right: 40px;
   }
+  .alt__nav__basket {
+    height: 100%;
+    padding: 40px 10px 0px 25px;
+  }
   .basket__count,
   .logout__user__x {
-    font-size: 17px;
-    width: 25px;
-    height: 25px;
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
     left: 15px;
-    bottom: 40px;
+    bottom: 35px;
   }
   .logout__user__x {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -276,13 +323,18 @@ footer {
   width: 100%;
 }
 
+footer p {
+  font-size: 0.8rem;
+  margin: 10px 0px 10px 0px;
+}
+
 .footer__social__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 .footer__social {
@@ -300,12 +352,6 @@ footer {
       justify-self: center;
   text-align: center;
   font-weight: 600;
-}
-
-@media (min-width: 880px) {
-  .footer__social {
-    font-size: 2rem;
-  }
 }
 
 .message__container {
@@ -391,7 +437,8 @@ footer {
   text-align: center;
 }
 
-.modal__basket {
+.modal__basket,
+.modal__favorite {
   font-size: 2rem;
   margin: 20px 0px;
 }
@@ -418,6 +465,10 @@ footer {
   max-height: 100%;
 }
 
+.minibasket__modal__container {
+  display: none;
+}
+
 @media (min-width: 720px) {
   .image__modal__container {
     padding-top: 20px;
@@ -425,6 +476,74 @@ footer {
   .close {
     top: 60px;
     right: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .minibasket__modal__container {
+    display: none;
+    width: 400px;
+    position: fixed;
+    right: 40px;
+    top: 106px;
+    z-index: 290;
+    background-color: #F7F1F1;
+    border: 2px solid #D4A591;
+  }
+  .minibasket__modal__container hr {
+    width: 90%;
+  }
+  .minibasket__products__container {
+    height: 60vh;
+    overflow: auto;
+  }
+  .minibasket__modal__products {
+    max-width: 160px;
+  }
+  .minibasket__modal__content {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 10px 20px;
+  }
+  .minibasket__modal__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+  .minibasket__modal__card .minibasket__modal__product__img {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .minibasket__modal__card .minibasket__quantity__container,
+  .minibasket__modal__card .minibasket__price__container {
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 22px;
+  }
+  .minibasket__modal__card p {
+    font-size: 0.9rem;
+  }
+  .minibasket__modal__total__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0px 22px;
+  }
+  .alt__nav__basket:hover .minibasket__modal__container {
+    display: block;
   }
 }
 
@@ -541,22 +660,20 @@ button:hover,
   font-size: 1.2rem;
 }
 
-.standard__cta__btn:hover span {
-  display: none;
-}
-
-.standard__cta__btn:hover::before {
-  content: url(../../logo/small_flying_stork.svg);
-}
-
 .standard__cta__btn:hover {
-  padding-top: 7px;
   border: 2px solid #423F38;
   background-color: #F7F1F1;
+  color: #423F38;
+  font-weight: bold;
 }
 
 .edit__btn {
   background-color: #CFD0C3;
+  color: #262421;
+}
+
+.delete__btn {
+  background-color: #E28D8D;
   color: #262421;
 }
 
@@ -622,6 +739,12 @@ button:hover,
       -ms-grid-row-align: center;
       align-self: center;
   font-size: 1.6rem;
+}
+
+.back_btn p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .back_btn:hover {
@@ -702,6 +825,15 @@ button:hover,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 720px) and (max-width: 1000px) {
+  .all__products__grid,
+  .featured__container,
+  .favorite__grid {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+  }
 }
 
 @media (min-width: 1000px) {
@@ -837,6 +969,7 @@ button:hover,
   margin-top: 10px;
   min-width: 250px;
   max-width: 250px;
+  padding-left: 10px;
 }
 
 input,
@@ -868,7 +1001,7 @@ input[type=file]::file-selector-button:hover {
   font-weight: bold;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 720px) {
   .filter__grid {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -877,6 +1010,10 @@ input[type=file]::file-selector-button:hover {
         -ms-flex-pack: end;
             justify-content: end;
   }
+}
+
+.intro__text {
+  font-weight: bold;
 }
 
 .about__grid {
@@ -889,12 +1026,29 @@ input[type=file]::file-selector-button:hover {
           flex-direction: column;
 }
 
+.about__img__container {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
 .about__img {
-  max-width: 300px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .intro__about {
   font-weight: bold;
+}
+
+.about__social__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about__social {
@@ -921,7 +1075,7 @@ input[type=file]::file-selector-button:hover {
   color: #D4A591;
 }
 
-@media (min-width: 880px) {
+@media (min-width: 720px) {
   .about__grid {
     display: -ms-grid;
     display: grid;
@@ -1023,7 +1177,7 @@ input[type=file]::file-selector-button:hover {
           transform: scale(1.05);
 }
 
-.add__to__basket {
+.product__details__btn {
   width: 100%;
 }
 
@@ -1060,11 +1214,19 @@ input[type=file]::file-selector-button:hover {
     place-self: end;
     font-size: 1.4rem;
   }
-  .product__detail__grid .add__to__basket {
+  .product__detail__grid .product__details__btn {
     height: 50px;
+  }
+  .product__detail__grid .product__details__btn__container {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 3;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .product__detail__grid .product__details__btn__container .standard__cta__btn {
+    width: 100%;
   }
 }
 
@@ -1084,7 +1246,8 @@ input[type=file]::file-selector-button:hover {
           order: 2;
 }
 
-.clearbtn {
+.clearbtn,
+.clear__favorites__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1102,8 +1265,23 @@ input[type=file]::file-selector-button:hover {
           order: 1;
 }
 
+.clearbtn:hover,
+.clear__favorites__btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 3px 3px 3px #E28D8D;
+          box-shadow: 3px 3px 3px #E28D8D;
+}
+
+.clear__favorites__btn {
+  width: 200px;
+}
+
 .clearbtn p {
   margin: 0px 10px 0px 10px;
+}
+
+.clear__favorites__btn p {
+  margin: 0px 20px 0px 10px;
 }
 
 .basket__grid {

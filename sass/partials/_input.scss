@@ -7,6 +7,7 @@
         margin-top: 10px;
         min-width: 250px;
         max-width: 250px;
+        padding-left: 10px;
     }
 }
 
@@ -38,7 +39,7 @@ input[type=file]::file-selector-button:hover {
     font-weight: bold;
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 720px) {
     .filter__grid {
         display: flex;
         justify-content: end;
