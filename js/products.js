@@ -3,7 +3,8 @@ import createNav from "./components/common/createNav.js";
 import renderProducts from "./components/renderHtml/renderProducts.js";
 import MESSAGES from "./constants/messages.js";
 import displayMessage from "./components/common/displayMessage.js";
-import filterProducts from "./components/search/searchProducts.js";
+import filterProducts from "./components/search/filterProducts.js";
+
 
 let count = 1;
 let totalPages = 0;
@@ -15,7 +16,7 @@ const loadingProducts = document.querySelector(".loading__products")
 createNav();
 
 async function getAllProducts() {
-    const productUrl = `${baseUrl}products?pagination[page]=${count}&pagination[pageSize]=16&populate=*`;
+    const productUrl = `${baseUrl}products?pagination[page]=${count}&pagination[pageSize]=12&populate=*`;
     try {
         const response = await fetch(productUrl);
         const result = await response.json();
@@ -27,7 +28,6 @@ async function getAllProducts() {
         renderProducts(products);
         showPreviousPageButton()
         showNextPageButton()
-        filterProducts()
 
         const paginationContainer = document.querySelector(".pagination__container");
         if (pages.pagination.pageCount >= 2) {
@@ -50,6 +50,8 @@ async function getAllProducts() {
 };
 getAllProducts();
 
+filterProducts()
+
 function showPreviousPageButton() {
     if (count === 1) {
         previousPage.style.display = "none";
@@ -60,7 +62,7 @@ function showPreviousPageButton() {
 
 function showNextPageButton() {
     if (count >= totalPages) {
-        displayMessage("error", MESSAGES.noMoreProducts, ".pagination__message__container");
+        displayMessage("warning", MESSAGES.noMoreProducts, ".pagination__message__container");
         nextPage.style.display = "none";
     } else {
         nextPage.style.display = "block";

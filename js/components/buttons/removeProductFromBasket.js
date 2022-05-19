@@ -1,6 +1,7 @@
 import { getProductFromBasket, saveToBasket } from "../../utils/storage.js";
 import renderBasket from "../renderHtml/renderBasket.js";
 import basketQuantityCounter from "../common/basketQuantityCounter.js";
+import renderModalBasket from "../modals/renderModalBasket.js";
 
 export default function removeProductFromBasket() {
     const modalContainer = document.querySelector(".modal__container");
@@ -29,6 +30,7 @@ export default function removeProductFromBasket() {
                 const updatedBasket = currentProductsInBasket.filter((product) => product.id !== id);
                 saveToBasket(updatedBasket);
                 renderBasket();
+                renderModalBasket()
             });
             cancelBtn.addEventListener("click", () => {
                 modalContainer.style.display = "none";

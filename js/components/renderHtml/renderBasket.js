@@ -38,14 +38,14 @@ export default function renderBasket() {
                                                 <div class="count__container">${product.quantity} item(s)</div>
                                                 <i class="fas fa-plus counter__icon" data-id="${product.id}" aria-label="add one more ${product.title} from basket"></i>
                                             </div>
-                                            <p class="product__sum">NOK ${sumPriceSpecificProduct}</p>
+                                            <p class="product__sum">NOK ${sumPriceSpecificProduct.toFixed(2)}</p>
                                         </div>
                                     </div>`
 
-        totalSum.innerHTML = `NOK ${totalPrice}`
+        totalSum.innerHTML = `NOK ${parseFloat(totalPrice).toFixed(2)}`
     });
     clearBasketBtn.addEventListener("click", clearBasketFromStorage);
-    removeProductFromBasket()
+    removeProductFromBasket();
 
     const quantityPlusBtn = document.querySelectorAll(".fa-plus");
     quantityPlusBtn.forEach((btn) => { btn.addEventListener("click", plusProduct) });

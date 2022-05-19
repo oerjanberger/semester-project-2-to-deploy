@@ -46,9 +46,12 @@ body {
 }
 
 .heading__container {
+  width: 300px;
+}
+
+.index__heading__container {
   -ms-grid-column-align: center;
       justify-self: center;
-  width: 300px;
 }
 
 a {
@@ -70,15 +73,38 @@ i :hover {
 }
 
 @media (min-width: 720px) and (max-width: 1000px) {
+  .container {
+    padding: 0px;
+  }
   .heading__container {
     width: 630px;
   }
 }
 
 @media (min-width: 1001px) {
+  .container {
+    padding: 0px;
+  }
   .heading__container {
     width: 960px;
   }
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-corner {
+  color: #F7F1F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #423f3829;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B2C6BD;
 }
 
 h1,
@@ -87,6 +113,10 @@ h3,
 h4,
 h5 {
   font-family: "lato", sans-serif;
+}
+
+h2 {
+  font-size: 1.3rem;
 }
 
 button,
@@ -105,6 +135,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 100%;
   z-index: 100;
   background: -webkit-gradient(linear, left top, right top, from(#B2C6BD), color-stop(50%, #B2C6BD), color-stop(75%, rgba(247, 241, 241, 0.8)), to(rgba(247, 241, 241, 0.5)));
   background: linear-gradient(to right, #B2C6BD 0%, #B2C6BD 50%, rgba(247, 241, 241, 0.8) 75%, rgba(247, 241, 241, 0.5) 100%);
@@ -263,7 +294,7 @@ header {
   font-size: 0.7rem;
 }
 
-@media (min-width: 880px) {
+@media (min-width: 720px) {
   .navbar__container i {
     font-size: 1.4rem;
   }
@@ -494,8 +525,8 @@ footer p {
     width: 90%;
   }
   .minibasket__products__container {
-    height: 60vh;
-    overflow: auto;
+    max-height: 68vh;
+    overflow: scroll;
   }
   .minibasket__modal__products {
     max-width: 160px;
@@ -504,7 +535,7 @@ footer p {
     width: 100%;
     max-width: 400px;
     margin: auto;
-    padding: 10px 20px;
+    padding: 10px;
   }
   .minibasket__modal__card {
     display: -webkit-box;
@@ -532,6 +563,9 @@ footer p {
   }
   .minibasket__modal__card p {
     font-size: 0.9rem;
+  }
+  .minibasket__modal__card:hover .minibasket__modal__product__info {
+    color: #E28D8D;
   }
   .minibasket__modal__total__container {
     display: -webkit-box;
@@ -840,8 +874,8 @@ button:hover,
   .all__products__grid,
   .featured__container,
   .favorite__grid {
-    -ms-grid-columns: (auto)[3];
-        grid-template-columns: repeat(3, auto);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -919,9 +953,6 @@ button:hover,
 .pagination__container {
   display: none;
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -949,12 +980,21 @@ button:hover,
   font-size: 1.5rem;
 }
 
-.pagination__container .page__arrow :hover {
+.pagination__container .page__arrow:hover {
+  cursor: pointer;
   color: #F7F1F1;
   background-color: #423F38;
 }
 
-.filter__container {
+.pagination__message__container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -965,11 +1005,31 @@ button:hover,
   margin-bottom: 40px;
 }
 
-.filter__container .filter {
+.filter__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filter__input .search {
   margin-top: 10px;
   min-width: 250px;
   max-width: 250px;
   padding-left: 10px;
+  border-right: none;
+}
+
+.filter__input .filter__btn {
+  background-color: #F7F1F1;
+  border: 3px solid #B2C6BD;
+  height: 45px;
+  width: 50px;
+}
+
+.filter__btn__container {
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 input,
@@ -1012,8 +1072,17 @@ input[type=file]::file-selector-button:hover {
   }
 }
 
-.intro__text {
-  font-weight: bold;
+.index__heading {
+  text-align: center;
+}
+
+.homepage__logo {
+  max-width: 60px;
+  margin-left: 20px;
+}
+
+.contact__section {
+  margin-top: 50px;
 }
 
 .about__grid {
@@ -1072,6 +1141,7 @@ input[type=file]::file-selector-button:hover {
 
 .about__social:hover i,
 .about__social:hover h5 {
+  cursor: pointer;
   color: #D4A591;
 }
 
@@ -1467,6 +1537,12 @@ hr {
 
 .input__container textarea {
   height: 100px;
+}
+
+.input__container .helper__text__container {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .input__container .helper__text {

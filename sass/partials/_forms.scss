@@ -17,6 +17,12 @@
         height: 100px;
     }
 
+    .helper__text__container {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+    }
+
     .helper__text {
         font-size: 0.7rem;
         margin-top: 2px;

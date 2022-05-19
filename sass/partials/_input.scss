@@ -1,14 +1,30 @@
-.filter__container {
+.filter__form {
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+}
 
-    .filter {
+.filter__input {
+    display: flex;
+
+    .search {
         margin-top: 10px;
         min-width: 250px;
         max-width: 250px;
         padding-left: 10px;
+        border-right: none;
     }
+
+    .filter__btn {
+        background-color: getColour(backgroundwhite);
+        border: 3px solid getColour(secondaryturquoise);
+        height: 45px;
+        width: 50px;
+    }
+}
+
+.filter__btn__container {
+    align-self: end;
 }
 
 input,

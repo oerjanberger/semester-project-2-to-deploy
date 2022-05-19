@@ -95,8 +95,8 @@
     }
 
     .minibasket__products__container {
-        height: 60vh;
-        overflow: auto;
+        max-height: 68vh;
+        overflow: scroll;
     }
 
     .minibasket__modal__products {
@@ -106,9 +106,8 @@
     .minibasket__modal__content {
         width: 100%;
         max-width: 400px;
-
         margin: auto;
-        padding: 10px 20px;
+        padding: 10px;
     }
 
     .minibasket__modal__card {
@@ -133,6 +132,10 @@
         p {
             font-size: 0.9rem;
         }
+    }
+
+    .minibasket__modal__card:hover .minibasket__modal__product__info {
+        color: getColour(primaryred);
     }
 
     .minibasket__modal__total__container {

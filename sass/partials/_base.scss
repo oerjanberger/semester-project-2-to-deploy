@@ -36,8 +36,11 @@ body {
 }
 
 .heading__container {
-    justify-self: center;
     width: 300px;
+}
+
+.index__heading__container {
+    justify-self: center;
 }
 
 a {
@@ -59,12 +62,20 @@ i :hover {
 }
 
 @media(min-width: 720px) and (max-width: 1000px) {
+    .container {
+        padding: 0px;
+    }
+
     .heading__container {
         width: 630px;
     }
 }
 
 @media(min-width: 1001px) {
+    .container {
+        padding: 0px;
+    }
+
     .heading__container {
         width: 960px;
     }

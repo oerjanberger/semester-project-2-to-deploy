@@ -1,7 +1,6 @@
 .pagination__container {
     display: none;
     margin-top: 30px;
-    display: flex;
     gap: 20px;
     justify-content: center;
 
@@ -23,10 +22,16 @@
         background-color: getColour(backgroundwhite);
         font-size: 1.5rem;
 
-        :hover {
+        &:hover {
+            cursor: pointer;
             color: getColour(backgroundwhite);
             background-color: getColour(textcolourprimary);
         }
     }
 
+}
+
+.pagination__message__container {
+    display: grid;
+    justify-content: center;
 }

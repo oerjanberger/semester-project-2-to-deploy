@@ -1,6 +1,7 @@
 import { getProductFromBasket, saveToBasket } from "../../utils/storage.js";
 import renderBasket from "../renderHtml/renderBasket.js";
 import basketQuantityCounter from "../common/basketQuantityCounter.js";
+import renderModalBasket from "../modals/renderModalBasket.js";
 
 export function plusProduct() {
     const id = this.dataset.id
@@ -10,9 +11,10 @@ export function plusProduct() {
         return product.id === id;
     });
     thisProduct.quantity++;
-    saveToBasket(currentProductsInBasket)
+    saveToBasket(currentProductsInBasket);
     renderBasket();
-    basketQuantityCounter()
+    renderModalBasket();
+    basketQuantityCounter();
 };
 
 export function minusProduct() {
@@ -31,7 +33,7 @@ export function minusProduct() {
     if (thisProduct.quantity > 1) {
 
         thisProduct.quantity--;
-        saveToBasket(currentProductsInBasket)
+        saveToBasket(currentProductsInBasket);
 
     } else if (thisProduct.quantity === 1) {
 
@@ -44,6 +46,7 @@ export function minusProduct() {
             const updatedBasket = currentProductsInBasket.filter((product) => product.id !== id);
             saveToBasket(updatedBasket);
             renderBasket();
+            renderModalBasket();
         });
 
         cancelBtn.addEventListener("click", () => {
@@ -51,5 +54,6 @@ export function minusProduct() {
         });
     }
     renderBasket();
-    basketQuantityCounter()
+    renderModalBasket();
+    basketQuantityCounter();
 }

@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-corner {
+    color: getColour(backgroundwhite);
+}
+
+::-webkit-scrollbar-thumb {
+    background: getColour(textcolourprimarytransparent);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: getColour(secondaryturquoise);
+}

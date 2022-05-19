@@ -2,6 +2,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    max-width: 100%;
     z-index: 100;
     background: linear-gradient(to right, $navColour);
 }
@@ -141,7 +142,7 @@ header {
     font-size: 0.7rem;
 }
 
-@media(min-width: 880px) {
+@media(min-width: 720px) {
     .navbar__container i {
         font-size: 1.4rem;
     }
