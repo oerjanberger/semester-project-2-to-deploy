@@ -6,13 +6,14 @@ export default function filterProducts() {
 
     filterInput.oninput = function () {
         filterValue = filterInput.value.toLowerCase().trim();
-        filterBtnContainer.innerHTML = `<a href="search.html?search=${filterValue}"><button type="button" class="filter__btn"><i
+        filterBtnContainer.innerHTML = `<a href="search.html?search=${filterValue}"><button class="filter__btn"><i
         class="fas fa-search"></i></button></a>`;
     }
 
-    filterBtn.onclick = function () {
+    filterBtn.onclick = function (event) {
+        event.preventDefault()
         filterValue = filterInput.value.toLowerCase().trim();
-        filterBtnContainer.innerHTML = `<a href="search.html?search=${filterValue}"><button type="button" class="filter__btn"><i
+        filterBtnContainer.innerHTML = `<a href="search.html?search=${filterValue}"><button class="filter__btn"><i
         class="fas fa-search"></i></button></a>`;
     }
 }
