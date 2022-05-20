@@ -4,7 +4,7 @@ export default function filterProducts() {
     const filterBtn = document.querySelector(".filter__btn")
     let filterValue = filterInput.value.trim().toLowerCase();
 
-    filterInput.onkeyup = function () {
+    filterInput.oninput = function () {
         filterValue = filterInput.value.trim().toLowerCase();
         filterBtnContainer.innerHTML = `<a href="search.html?search=${filterValue}"><button type="button" class="filter__btn"><i
         class="fas fa-search"></i></button></a>`;
