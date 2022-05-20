@@ -31,6 +31,7 @@ if (filterValue === null || filterValue === "") {
     (async function searchProducts() {
         const searchUrl = baseUrl + "products?pagination[page]=1&pagination[pageSize]=100&populate=*";
         messageContainer.innerHTML = ""
+        filterContentHeading.innerHTML = `Products that have "${filterValue}" in the Title or Description:`;
 
         try {
             const response = await fetch(searchUrl);
@@ -40,7 +41,6 @@ if (filterValue === null || filterValue === "") {
 
             const filteredProducts = searchResult.filter(function (searchResult) {
                 if (searchResult.attributes.Title.toLowerCase().includes(filterValue) || searchResult.attributes.Description.toLowerCase().includes(filterValue)) {
-                    filterContentHeading.innerHTML = `Products that have "${filterValue}" in the Title or Description:`;
                     return true
                 }
             });

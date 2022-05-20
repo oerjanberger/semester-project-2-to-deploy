@@ -53,7 +53,7 @@ export default function renderProductDetails(product) {
             <div class="product__detail__info">
                 <h2>Product description</h2>
                 <p>${productDescription}</p>
-                <p class="product__detail__price">Nok ${productPrice}</p>     
+                <p class="product__detail__price">NOK ${productPrice}</p>     
             </div>
             <div class="basket__btn__container product__details__btn__container">${productButtons}</div>
         </div>`;
