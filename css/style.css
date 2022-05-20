@@ -47,6 +47,7 @@ body {
 
 .heading__container {
   width: 300px;
+  margin: 0 auto;
 }
 
 .index__heading__container {
@@ -68,7 +69,8 @@ i :hover {
   cursor: pointer;
 }
 
-.fa-heart {
+.fa-heart,
+.fa-heart-broken {
   color: #E28D8D;
 }
 
@@ -86,7 +88,8 @@ i :hover {
     padding: 0px;
   }
   .heading__container {
-    width: 960px;
+    width: 987px;
+    margin: 0;
   }
 }
 
@@ -397,13 +400,13 @@ footer p {
 
 .error {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   border: 2px solid #E28D8D;
 }
 
 @media (min-width: 720px) {
   .error {
-    border: 4px solid #E28D8D;
+    border: 2px solid #E28D8D;
   }
 }
 
@@ -791,10 +794,6 @@ button:hover,
   width: 100%;
 }
 
-.form__btn:hover {
-  padding-left: 120px;
-}
-
 .login__btn {
   width: 100%;
 }
@@ -1061,6 +1060,10 @@ input[type=file]::file-selector-button:hover {
   font-weight: bold;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 @media (min-width: 720px) {
   .filter__grid {
     display: -webkit-box;
@@ -1228,6 +1231,17 @@ input[type=file]::file-selector-button:hover {
   font-size: 2rem;
 }
 
+.product__detail__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.product__detail__info .product__detail__price {
+  place-self: end;
+}
+
 .product__details__image {
   width: 100%;
   height: 350px;
@@ -1268,8 +1282,6 @@ input[type=file]::file-selector-button:hover {
     -ms-grid-column: 2;
         grid-column-start: 2;
     grid-column-end: 3;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-rows: auto auto 1fr;
         grid-template-rows: auto auto 1fr;
   }
@@ -1281,7 +1293,6 @@ input[type=file]::file-selector-button:hover {
     font-size: 1.2rem;
   }
   .product__detail__grid .product__detail__info .product__detail__price {
-    place-self: end;
     font-size: 1.4rem;
   }
   .product__detail__grid .product__details__btn {
@@ -1297,6 +1308,12 @@ input[type=file]::file-selector-button:hover {
   }
   .product__detail__grid .product__details__btn__container .standard__cta__btn {
     width: 100%;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1000px) {
+  .content__wrapper {
+    margin: 130px 30px 0px 30px;
   }
 }
 

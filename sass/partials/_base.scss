@@ -37,6 +37,7 @@ body {
 
 .heading__container {
     width: 300px;
+    margin: 0 auto;
 }
 
 .index__heading__container {
@@ -57,7 +58,8 @@ i :hover {
     cursor: pointer;
 }
 
-.fa-heart {
+.fa-heart,
+.fa-heart-broken {
     color: getColour(primaryred);
 }
 
@@ -77,6 +79,7 @@ i :hover {
     }
 
     .heading__container {
-        width: 960px;
+        width: 987px;
+        margin: 0;
     }
 }

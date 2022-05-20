@@ -62,7 +62,6 @@ function showPreviousPageButton() {
 
 function showNextPageButton() {
     if (count >= totalPages) {
-        displayMessage("warning", MESSAGES.noMoreProducts, ".pagination__message__container");
         nextPage.style.display = "none";
     } else {
         nextPage.style.display = "block";

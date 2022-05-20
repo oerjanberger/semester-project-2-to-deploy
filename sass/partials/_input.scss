@@ -55,6 +55,10 @@ input[type=file]::file-selector-button:hover {
     font-weight: bold;
 }
 
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
 @media(min-width: 720px) {
     .filter__grid {
         display: flex;

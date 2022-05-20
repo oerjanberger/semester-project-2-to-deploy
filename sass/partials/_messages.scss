@@ -10,11 +10,11 @@
 
 .error {
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     border: 2px solid getColour(primaryred);
 
     @media(min-width: 720px) {
-        border: 4px solid getColour(primaryred);
+        border: 2px solid getColour(primaryred);
     }
 }
 

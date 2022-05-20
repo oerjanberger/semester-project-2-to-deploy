@@ -75,10 +75,13 @@ export default function createNav() {
     function toggleNav() {
         if (!menuCheckbox.checked) {
             navContainer.style.display = "block"
+
         } else if (menuCheckbox.checked) {
             navContainer.style.display = "none"
         }
     };
+
+
     basketQuantityCounter();
     renderModalBasket()
     logout()
