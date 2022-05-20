@@ -8,7 +8,8 @@ createNav();
 
 const querystring = document.location.search;
 const params = new URLSearchParams(querystring);
-const filterValue = params.get("search");
+const queryValue = params.get("search");
+const filterValue = queryValue.toLowerCase().trim()
 const filterContentHeading = document.querySelector(".filter__content__heading");
 const messageContainer = document.querySelector(".message__container");
 const loadingContainer = document.querySelector(".loading__products")
