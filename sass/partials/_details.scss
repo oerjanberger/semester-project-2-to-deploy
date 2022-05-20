@@ -21,11 +21,11 @@
     grid-template-columns: auto;
 
     .product__detail__price {
+        min-width: 85px;
         place-self: end;
+        display: flex;
     }
 }
-
-
 
 .product__details__image {
     width: 100%;
