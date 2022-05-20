@@ -57,9 +57,8 @@ header {
 
 .logout__nav {
     width: 30vh;
-    min-width: 200px;
-}
 
+}
 
 .nav__list {
     padding: 10px 0;
@@ -158,9 +157,12 @@ header {
         padding: 40px 55px;
     }
 
-    .nav,
-    .logout__nav {
+    .nav {
         min-width: 300px;
+    }
+
+    .logout__nav {
+        width: 30vh;
     }
 
     .nav__list li {

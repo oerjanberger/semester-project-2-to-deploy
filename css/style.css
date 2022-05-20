@@ -200,7 +200,6 @@ header {
 
 .logout__nav {
   width: 30vh;
-  min-width: 200px;
 }
 
 .nav__list {
@@ -309,9 +308,11 @@ header {
   .hamburger__label {
     padding: 40px 55px;
   }
-  .nav,
-  .logout__nav {
+  .nav {
     min-width: 300px;
+  }
+  .logout__nav {
+    width: 30vh;
   }
   .nav__list li {
     font-size: 1.5rem;
