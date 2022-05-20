@@ -30,8 +30,8 @@
         <header>
             <div class="navbar__container">
                 <div class="nav__list__container">
-                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
-                            aria-label="Navigation menu"></i></label>
+                    <label class="hamburger__label" for="hamburger__menu" tabindex="0" aria-label="Navigation menu"><i
+                            class="fas fa-bars hamburger__label" title="Navigation menu"></i></label>
                     <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
                     <nav class="nav">
                     </nav>
@@ -46,24 +46,6 @@
         </header>
         <main>
             <section class="container">
-                <div class="content__wrapper">
-                    <a href="products.html" class="all__products__link__container back_btn"><i
-                            class="fas fa-angle-left back__arrow"></i>
-                        <p>Back to all products</p>
-                    </a>
-                    <div class="message__container"></div>
-                    <div class="loading__products">
-                        <img src="./logo/Stork_SVG.svg" alt="loading symbol"
-                            class="loading__symbol loading__symbol__one">
-                        <img src="./logo/flying_stork.svg" alt="loading symbol"
-                            class="loading__symbol loading__symbol__two">
-                    </div>
-                    <div class="product__details__container"></div>
-                </div>
-                <div class="image__modal__container">
-                    <div class="close"><i class="fas fa-times close__btn"></i></div>
-                    <img class="image__modal">
-                </div>
                 <div class="modal__container">
                     <div class="modal__content">
                         <div class="modal__logo"></div>
@@ -77,15 +59,29 @@
                         </div>
                     </div>
                 </div>
+                <div class="content__wrapper">
+                    <a href="products.html" class="all__products__link__container back_btn"><i
+                            class="fas fa-angle-left back__arrow"></i>
+                        <p>Back to all products</p>
+                        <div class="message__container"></div>
+                    </a>
+                    <div class="loading__products">
+                        <img src="./logo/Stork_SVG.svg" alt="loading symbol"
+                            class="loading__symbol loading__symbol__one">
+                        <img src="./logo/flying_stork.svg" alt="loading symbol"
+                            class="loading__symbol loading__symbol__two">
+                    </div>
+                    <div class="product__details__container"></div>
+                </div>
             </section>
 
         </main>
     </div>
     <footer>
         <div class="footer__social__container">
-            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
-            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
-            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+            <i class="fab fa-instagram footer__social" title="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" title="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" title="Baby Bliss twitter page"></i>
         </div>
         <p>Copyright &copy; 2022 BabyBliss. All rights reserved</p>
     </footer>

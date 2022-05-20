@@ -31,8 +31,8 @@
         <header>
             <div class="navbar__container">
                 <div class="nav__list__container">
-                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
-                            aria-label="Navigation menu"></i></label>
+                    <label class="hamburger__label" for="hamburger__menu" tabindex="0" aria-label="Navigation menu"><i
+                            class="fas fa-bars hamburger__label" title="Navigation menu"></i></label>
                     <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
                     <nav class="nav">
                     </nav>
@@ -47,42 +47,7 @@
 
         </header>
         <main>
-
             <section class="container">
-                <div class="content__wrapper">
-                    <div class="heading__container">
-                        <h1>All products </h1>
-                        <div class="filter__grid">
-                            <form action="search.html?search=" class="filter__form">
-                                <label for="filter">Filter products</label>
-                                <div class="filter__input">
-                                    <input type="search" name="search" id="search" class="search"
-                                        placeholder="Search example: beanie, shoes...">
-                                    <div class="filter__btn__container">
-                                        <button type="button" class="filter__btn" name="filterBtn"><i
-                                                class="fas fa-search"></i></button>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="message__container"></div>
-                    <div class="loading__products">
-                        <img src="./logo/Stork_SVG.svg" alt="loading symbol"
-                            class="loading__symbol loading__symbol__one">
-                        <img src="./logo/flying_stork.svg" alt="loading symbol"
-                            class="loading__symbol loading__symbol__two">
-                    </div>
-                    <div class="all__products__grid">
-                    </div>
-                    <div class="pagination__container">
-                        <i class="fas fa-chevron-left page__arrow" aria-label="Pervious page"></i>
-                        <div class="pages__container"></div>
-                        <i class="fas fa-chevron-right page__arrow" aria-label="Next page"></i>
-                    </div>
-                    <div class="pagination__message__container"></div>
-                </div>
                 <div class="modal__container">
                     <div class="modal__content">
                         <div class="modal__logo"></div>
@@ -96,15 +61,50 @@
                         </div>
                     </div>
                 </div>
+                <div class="content__wrapper">
+                    <div class="heading__container">
+                        <h1>All products </h1>
+                        <div class="filter__grid">
+                            <form action="search.html?search=" class="filter__form">
+                                <label for="filter">Filter products</label>
+                                <div class="filter__input">
+                                    <input type="search" name="search" id="search" class="search" aria-labe="search"
+                                        placeholder="Search example: beanie, shoes...">
+                                    <div class="filter__btn__container">
+                                        <button type="button" class="filter__btn" name="filterBtn"><i
+                                                class="fas fa-search" title="search"></i></button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="message__container"></div>
+                    </div>
+                    <div class="loading__products">
+                        <img src="./logo/Stork_SVG.svg" alt="loading symbol"
+                            class="loading__symbol loading__symbol__one">
+                        <img src="./logo/flying_stork.svg" alt="loading symbol"
+                            class="loading__symbol loading__symbol__two">
+                    </div>
+                    <div class="all__products__grid">
+                    </div>
+                    <div class="pagination__container">
+                        <i class="fas fa-chevron-left page__arrow" title="Pervious page" tabindex="0"></i>
+                        <div class="pages__container"></div>
+                        <i class="fas fa-chevron-right page__arrow" title="Next page" tabindex="0"></i>
+                    </div>
+                    <div class="pagination__message__container"></div>
+                </div>
+
             </section>
 
         </main>
     </div>
     <footer>
         <div class="footer__social__container">
-            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
-            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
-            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+            <i class="fab fa-instagram footer__social" title="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" title="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" title="Baby Bliss twitter page"></i>
         </div>
         <p>Copyright &copy; 2022 BabyBliss. All rights reserved</p>
     </footer>

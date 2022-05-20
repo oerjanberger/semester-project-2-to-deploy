@@ -32,11 +32,11 @@ export default function renderBasket() {
                                         </div>
                                         <div class="basket__info__container">
                                         <a href="product_details.html?id=${product.id}"><h5>${product.title}</h5></a>
-                                            <i class="fas fa-trash product__trash" data-id="${product.id}" aria-label="remove ${product.title} from basket"></i>
+                                            <button data-id="${product.id}" aria-label="remove ${product.title} from basket" class="product__trash" ><i class="fas fa-trash"></i></button>
                                             <div class="counter__container">
-                                                <i class="fas fa-minus counter__icon" data-id="${product.id}" aria-label="reduce number of ${product.title} from basket by 1"></i>
+                                                <button class="minus counter__btn" data-id="${product.id}" aria-label="reduce number of ${product.title} from basket by 1"><i class="fas fa-minus"></i></button>
                                                 <div class="count__container">${product.quantity} item(s)</div>
-                                                <i class="fas fa-plus counter__icon" data-id="${product.id}" aria-label="add one more ${product.title} from basket"></i>
+                                                <button class="plus counter__btn" data-id="${product.id}" aria-label="add one more ${product.title} from basket"><i class="fas fa-plus"></i>
                                             </div>
                                             <p class="product__sum">NOK ${sumPriceSpecificProduct.toFixed(2)}</p>
                                         </div>
@@ -47,11 +47,9 @@ export default function renderBasket() {
     clearBasketBtn.addEventListener("click", clearBasketFromStorage);
     removeProductFromBasket();
 
-    const quantityPlusBtn = document.querySelectorAll(".fa-plus");
+    const quantityPlusBtn = document.querySelectorAll(".plus");
     quantityPlusBtn.forEach((btn) => { btn.addEventListener("click", plusProduct) });
 
-    const quantityMinusBtn = document.querySelectorAll(".fa-minus");
+    const quantityMinusBtn = document.querySelectorAll(".minus");
     quantityMinusBtn.forEach((btn) => { btn.addEventListener("click", minusProduct) });
-
-
 }

@@ -19,6 +19,20 @@ export default function imageModal() {
         if (event.target === imageModalContainer) {
             imageModalContainer.style.display = "none";
         }
+    }
 
+    // Added for accessibility
+    productDetailsImage.onkeyup = function (event) {
+        if (event.keyCode === 13) {
+            imageModalContainer.style.display = "block";
+            imageModal.src = this.src;
+            imageModal.alt = this.alt;
+        }
+    }
+    // Added for accessibility
+    closeBtn.onkeyup = function (event) {
+        if (event.keyCode === 13) {
+            closeBtn.click();
+        }
     }
 }

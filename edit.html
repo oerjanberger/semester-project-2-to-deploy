@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="This is a page to edit product an existing">
     <script src="https://kit.fontawesome.com/591f5bf3d7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.typekit.net/ufr7cbx.css">
     <link rel="icon" href="logo/webicon__logo.png" type="image/x-icon">
@@ -21,7 +21,7 @@
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
-    <title></title>
+    <title>Baby Bliss || Edit product</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
         <header>
             <div class="navbar__container">
                 <div class="nav__list__container">
-                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
-                            aria-label="Navigation menu"></i></label>
+                    <label class="hamburger__label" for="hamburger__menu" tabindex="0" aria-label="Navigation menu"><i
+                            class="fas fa-bars hamburger__label" title="Navigation menu"></i></label>
                     <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
                     <nav class="nav">
                     </nav>
@@ -39,13 +39,24 @@
                 <div class="nav__logo__container">
                     <a href="index.html"><img src="logo/Logo_svg.svg" alt="Baby Bliss logo" class="nav__logo"></a>
                 </div>
-                <div class="alt__nav__container">
-
-                </div>
+                <div class="alt__nav__container"></div>
             </div>
         </header>
         <main>
             <section class="container">
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <div class="modal__logo"></div>
+                        <hr>
+                        <div class="modal__message"></div>
+                        <div class="basket__btn__container">
+                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
+                                aria-label="cancel">Cancel</button>
+                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
+                                aria-label="confirm">Confirm</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="content__wrapper">
                     <a href="products.html" class="all__products__link__container back_btn"><i
                             class="fas fa-angle-left back__arrow"></i>
@@ -107,8 +118,10 @@
                         </div>
                         <label>Featured</label>
                         <div class="featured__icon__container">
-                            <i class="fas fa-check-circle featured__yes featured__icon"></i>
-                            <i class="fas fa-times-circle featured__no featured__icon"></i>
+                            <i class="fas fa-check-circle featured__yes featured__icon" title="set featured to yes"
+                                tabindex="0"></i>
+                            <i class="fas fa-times-circle featured__no featured__icon" title="set featured to no"
+                                tabindex="0"></i>
                             <input type="checkbox" name="Featured" id="featured" class="featured__checkbox">
                         </div>
                         <input type="hidden" name="product__id" id="product__id" class="input__product__id">
@@ -117,29 +130,22 @@
                             <button type="button" id="delete__product__btn"
                                 class="standard__cta__btn edit__btn basket__btn delete__btn">Delete product</button>
                         </div>
-                    </form>
-                </div>
-                <div class="modal__container">
-                    <div class="modal__content">
-                        <div class="modal__logo"></div>
-                        <hr>
-                        <div class="modal__message"></div>
-                        <div class="basket__btn__container">
-                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
-                                aria-label="cancel">Cancel</button>
-                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
-                                aria-label="confirm">Confirm</button>
+                        <div class="sending__data">
+                            <img src="./logo/Stork_SVG.svg" alt="loading symbol"
+                                class="loading__symbol loading__symbol__one">
+                            <img src="./logo/flying_stork.svg" alt="loading symbol"
+                                class="loading__symbol loading__symbol__two">
                         </div>
-                    </div>
+                    </form>
                 </div>
             </section>
         </main>
     </div>
     <footer>
         <div class="footer__social__container">
-            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
-            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
-            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+            <i class="fab fa-instagram footer__social" title="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" title="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" title="Baby Bliss twitter page"></i>
         </div>
         <p>Copyright &copy; 2022 BabyBliss. All rights reserved</p>
     </footer>

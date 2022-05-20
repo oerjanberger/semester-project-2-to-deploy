@@ -1,5 +1,5 @@
 footer {
-    background: getColour(primaryred);
+    background: getColour(secondaryturquoise);
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 10px;
@@ -11,6 +11,7 @@ footer {
     p {
         font-size: 0.8rem;
         margin: 10px 0px 10px 0px;
+        color: getColour(textcoloursecondary);
     }
 }
 
@@ -21,13 +22,14 @@ footer {
 }
 
 .footer__social {
+    color: getColour(textcoloursecondary);
     font-size: 1.5rem
 }
 
 .footer__social:hover,
 .footer__info__container a:hover {
     cursor: pointer;
-    color: getColour(backgroundwhite);
+    color: getColour(primaryred);
 }
 
 .footer__info__container {

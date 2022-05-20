@@ -31,8 +31,8 @@
         <header>
             <div class="navbar__container">
                 <div class="nav__list__container">
-                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
-                            aria-label="Navigation menu"></i></label>
+                    <label class="hamburger__label" for="hamburger__menu" tabindex="0" aria-label="Navigation menu"><i
+                            class="fas fa-bars hamburger__label" title="Navigation menu"></i></label>
                     <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
                     <nav class="nav">
                     </nav>
@@ -47,21 +47,28 @@
         </header>
         <main>
             <section class="container">
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <div class="modal__logo"></div>
+                        <hr>
+                        <div class="modal__message"></div>
+                        <div class="basket__btn__container">
+                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
+                                aria-label="cancel">Cancel</button>
+                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
+                                aria-label="confirm">Confirm</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="content__wrapper">
                     <div class="heading__clearbtn__container">
                         <h1>Your Favorites</h1>
-                        <div class="clear__favorites__btn">
+                        <button class="clear__favorites__btn" aria-label="clear favorites">
                             <p>Remove favorites</p>
-                            <i class="fas fa-heart-broken" aria-label="clear all products from favorites"></i>
-                        </div>
+                            <i class="fas fa-heart-broken" title="clear all products from favorites"></i>
+                        </button>
                     </div>
                     <div class="message__container"></div>
-                    <div class="loading__products">
-                        <img src="./logo/Stork_SVG.svg" alt="loading symbol"
-                            class="loading__symbol loading__symbol__one">
-                        <img src="./logo/flying_stork.svg" alt="loading symbol"
-                            class="loading__symbol loading__symbol__two">
-                    </div>
                     <div class="favorite__grid"></div>
                     <div class="all__products__btn__container">
                         <a href="products.html">
@@ -71,28 +78,15 @@
                             </button>
                         </a>
                     </div>
-                    <div class="modal__container">
-                        <div class="modal__content">
-                            <div class="modal__logo"></div>
-                            <hr>
-                            <div class="modal__message"></div>
-                            <div class="basket__btn__container">
-                                <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
-                                    aria-label="cancel">Cancel</button>
-                                <button id="confirm__btn" class="standard__cta__btn modal__btn"
-                                    aria-label="confirm">Confirm</button>
-                            </div>
-                        </div>
-                    </div>
             </section>
     </div>
     </main>
     </div>
     <footer>
         <div class="footer__social__container">
-            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
-            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
-            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+            <i class="fab fa-instagram footer__social" title="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" title="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" title="Baby Bliss twitter page"></i>
         </div>
         <p>Copyright &copy; 2022 BabyBliss. All rights reserved</p>
     </footer>

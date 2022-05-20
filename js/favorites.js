@@ -3,3 +3,4 @@ import renderFavorites from "./components/renderHtml/renderFavorites.js"
 
 createNav();
 renderFavorites()
+

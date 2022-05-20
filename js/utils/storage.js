@@ -59,8 +59,11 @@ export function clearBasketFromStorage() {
     const confirmBtn = document.querySelector("#confirm__btn");
 
     modalContainer.style.display = "block";
-    modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" aria-label="shopping basket"></i>`;
+    modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" title="shopping basket .modal__basket"></i>`;
     modalMessage.innerHTML = `<p>Are you sure you want to clear your basket?</p>`;
+    (function getFocus() {
+        cancelBtn.focus();
+    })();
 
     confirmBtn.addEventListener("click", () => {
         modalContainer.style.display = "none";
@@ -72,6 +75,11 @@ export function clearBasketFromStorage() {
     cancelBtn.addEventListener("click", () => {
         modalContainer.style.display = "none";
     });
+    window.onclick = function (event) {
+        if (event.target === modalContainer) {
+            modalContainer.style.display = "none";
+        }
+    }
 }
 
 export function clearFavoritesFromStorage() {
@@ -84,6 +92,9 @@ export function clearFavoritesFromStorage() {
     modalContainer.style.display = "block";
     modalLogo.innerHTML = `<i class="fas fa-heart modal__favorite"></i>`;
     modalMessage.innerHTML = `<p>Are you sure you want to remove all products from favorites?</p>`;
+    (function getFocus() {
+        cancelBtn.focus();
+    })();
 
     confirmBtn.addEventListener("click", () => {
         modalContainer.style.display = "none";
@@ -94,6 +105,11 @@ export function clearFavoritesFromStorage() {
     cancelBtn.addEventListener("click", () => {
         modalContainer.style.display = "none";
     });
+    window.onclick = function (event) {
+        if (event.target === modalContainer) {
+            modalContainer.style.display = "none";
+        }
+    }
 }
 
 export function clearUserFromStorage() {

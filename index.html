@@ -31,8 +31,8 @@
         <header>
             <div class="navbar__container">
                 <div class="nav__list__container">
-                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
-                            aria-label="Navigation menu"></i></label>
+                    <label class="hamburger__label" for="hamburger__menu" tabindex="0" aria-label="Navigation menu"><i
+                            class="fas fa-bars hamburger__label" title="Navigation menu"></i></label>
                     <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
                     <nav class="nav">
                     </nav>
@@ -61,6 +61,19 @@
             </div>
             <div class="herobanner__message__container"></div>
             <section class="container">
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <div class="modal__logo"></div>
+                        <hr>
+                        <div class="modal__message"></div>
+                        <div class="basket__btn__container">
+                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
+                                aria-label="cancel">Cancel</button>
+                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
+                                aria-label="confirm">Confirm</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="content__wrapper__index">
                     <div class="index__heading__container heading__container">
                         <h1 class="index__heading">Welcome to Baby Bliss<img src="logo/Stork_SVG.svg"
@@ -68,8 +81,8 @@
                     </div>
                     <div class="heading__container"></div>
                     <h2>Featured products</h2>
+                    <div class="message__container"></div>
                 </div>
-                <div class="message__container"></div>
                 <div class="loading__products">
                     <img src="./logo/Stork_SVG.svg" alt="loading symbol" class="loading__symbol loading__symbol__one">
                     <img src="./logo/flying_stork.svg" alt="loading symbol"
@@ -97,37 +110,24 @@
                     <div class="about__social__container">
                         <a>
                             <div class="about__social">
-                                <i class="fab fa-instagram" aria-label="Baby Bliss instagram page"></i>
+                                <i class="fab fa-instagram" title="Baby Bliss instagram page"></i>
                                 <h5>Babyblissonline</h5>
                             </div>
                         </a>
                         <a>
                             <div class="about__social">
-                                <i class="fab fa-facebook" aria-label="Baby Bliss facebook page"></i>
+                                <i class="fab fa-facebook" title="Baby Bliss facebook page"></i>
                                 <h5>Babyblissonline</h5>
                             </div>
                         </a>
                         <a>
                             <div class="about__social">
-                                <i class="fab fa-twitter" aria-label="Baby Bliss twitter page"></i>
+                                <i class="fab fa-twitter" title="Baby Bliss twitter page"></i>
                                 <h5>Babyblissonline</h5>
                             </div>
                         </a>
                     </div>
 
-                </div>
-                <div class="modal__container">
-                    <div class="modal__content">
-                        <div class="modal__logo"></div>
-                        <hr>
-                        <div class="modal__message"></div>
-                        <div class="basket__btn__container">
-                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
-                                aria-label="cancel">Cancel</button>
-                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
-                                aria-label="confirm">Confirm</button>
-                        </div>
-                    </div>
                 </div>
     </div>
     </section>
@@ -136,9 +136,9 @@
     </div>
     <footer>
         <div class="footer__social__container">
-            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
-            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
-            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+            <i class="fab fa-instagram footer__social" title="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" title="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" title="Baby Bliss twitter page"></i>
         </div>
         <p>Copyright &copy; 2022 BabyBliss. All rights reserved</p>
     </footer>

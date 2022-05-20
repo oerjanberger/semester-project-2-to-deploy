@@ -40,13 +40,16 @@ export default function renderProductDetails(product) {
         </div>
         <div class="product__detail__grid">
             <div class="details__img__fav__container">
-                <div class="favorite__icon__container"><i class="${cssClass}  fa-heart favorite__button" data-id="${product.id}" data-title="${productTitle}" data-image="${productImage}" data-alt="${productImageAlt}" data-price="${productPrice}" aria-label="${heartAriaLabel}${productTitle}${heartAriaLabelCont}"></i></div>
+                <div class="favorite__icon__container"><i class="${cssClass}  fa-heart favorite__button" tabindex="0" data-id="${product.id}" data-title="${productTitle}" data-image="${productImage}" data-alt="${productImageAlt}" data-price="${productPrice}" title="${heartAriaLabel}${productTitle}${heartAriaLabelCont}"></i></div>
                 <div>
-                    <div class="product__details__img__container"><img
-                            src="${productImage}" alt="${productImageAlt}"
-                            class="product__details__image"></div>
+                    <div class="product__details__img__container">
+                    <img src="${productImage}" alt="${productImageAlt}" class="product__details__image" tabindex="0"></div>
                 </div>
             </div>
+            <div class="image__modal__container">
+            <div class="close"><i class="fas fa-times close__btn" title="close image" tabindex="0"></i></div>
+            <img class="image__modal">
+        </div>
             <div class="product__detail__info">
                 <h2>Product description</h2>
                 <p>${productDescription}</p>

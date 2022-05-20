@@ -30,8 +30,8 @@
         <header>
             <div class="navbar__container">
                 <div class="nav__list__container">
-                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
-                            aria-label="Navigation menu"></i></label>
+                    <label class="hamburger__label" for="hamburger__menu" tabindex="0" aria-label="Navigation menu"><i
+                            class="fas fa-bars hamburger__label" title="Navigation menu"></i></label>
                     <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
                     <nav class="nav">
                     </nav>
@@ -46,33 +46,7 @@
         </header>
         <main>
             <section class="container">
-                <div class="content__wrapper"></div>
-                <div class="heading__clearbtn__container">
-                    <h1>Your Basket</h1>
-                    <div class="clearbtn">
-                        <p>Clear basket</p>
-                        <i class="fas fa-trash" aria-label="clear the basket of all products"></i>
-                    </div>
-                </div>
-                <div class="message__container"></div>
-                <div class="loading__products">
-                    <img src="./logo/Stork_SVG.svg" alt="loading symbol" class="loading__symbol loading__symbol__one">
-                    <img src="./logo/flying_stork.svg" alt="loading symbol"
-                        class="loading__symbol loading__symbol__two">
-                </div>
-                <div class="basket__grid">
-                </div>
-                <hr>
-                <div class="sum__container">
-                    <h4>Sum</h4>
-                    <p class="total__sum"></p>
-                </div>
-                <div class="basket__btn__container">
-                    <a href="products.html"><button class="standard__cta__btn edit__btn basket__btn">Continue
-                            shopping</button></a>
-                    <a><button class="standard__cta__btn basket__btn">Checkout</button></a>
-                </div>
-                <div class="modal__container">
+                <div class="modal__container" aria-dialog="">
                     <div class="modal__content">
                         <div class="modal__logo"></div>
                         <hr>
@@ -85,15 +59,35 @@
                         </div>
                     </div>
                 </div>
+                <div class="content__wrapper"></div>
+                <div class="heading__clearbtn__container">
+                    <h1>Your Basket</h1>
+                    <button class="clearbtn" aria-label="clear basket">
+                        <p>Clear basket</p>
+                        <i class="fas fa-trash" title="clear the basket of all products"></i>
+                    </button>
+                </div>
+                <div class="message__container"></div>
+                <div class="basket__grid">
+                </div>
+                <hr>
+                <div class="sum__container">
+                    <h4>Sum</h4>
+                    <p class="total__sum"></p>
+                </div>
+                <div class="basket__btn__container">
+                    <a href="products.html"><button class="standard__cta__btn edit__btn basket__btn">Continue
+                            shopping</button></a>
+                    <a><button class="standard__cta__btn basket__btn">Checkout</button></a>
+                </div>
             </section>
-
         </main>
     </div>
     <footer>
         <div class="footer__social__container">
-            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
-            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
-            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+            <i class="fab fa-instagram footer__social" title="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" title="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" title="Baby Bliss twitter page"></i>
         </div>
         <p>Copyright &copy; 2022 BabyBliss. All rights reserved</p>
     </footer>

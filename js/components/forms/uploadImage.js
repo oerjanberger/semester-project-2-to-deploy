@@ -43,7 +43,7 @@ export default async function uploadImage() {
         if (response.ok) {
             verifyLoader.style.display = "none";
             verifyBtn.classList.add = "verify__success";
-            verifyBtn.innerHTML = `<i class="fas fa-check" aria-label="successfully verified"></i>`;
+            verifyBtn.innerHTML = `<i class="fas fa-check" title="successfully verified"></i>`;
             imageUploadId.value = json[0].id;
             getUploadedImage(imageUploadId.value);
         }

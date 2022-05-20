@@ -82,4 +82,18 @@ function showPreviousPage() {
 };
 
 previousPage.addEventListener("click", showPreviousPage);
+
+// Added for accessibility
+previousPage.onkeyup = function (event) {
+    if (event.keyCode === 13) {
+        showPreviousPage();
+    }
+}
 nextPage.addEventListener("click", showNextPage);
+
+// Added for accessibility
+nextPage.onkeyup = function (event) {
+    if (event.keyCode === 13) {
+        showNextPage();
+    }
+}

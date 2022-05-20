@@ -1,9 +1,15 @@
 .loading__products,
-.loading__herobanner {
+.loading__herobanner,
+.sending__data {
     display: flex;
     justify-content: center;
     position: relative;
     margin-bottom: 50px;
+}
+
+.sending__data {
+    margin-top: 30px;
+    display: none;
 }
 
 .loading__symbol {

@@ -55,6 +55,12 @@ header {
     padding-top: 100px;
 }
 
+.logout__nav {
+    width: 30vh;
+    min-width: 200px;
+}
+
+
 .nav__list {
     padding: 10px 0;
 }
@@ -82,6 +88,7 @@ header {
 .active .fa-heart {
     text-decoration: none;
 }
+
 
 .nav__logo__container {
     justify-self: center;
@@ -123,7 +130,7 @@ header {
     background-color: getColour(highlightorange);
     font-size: 10px;
     font-weight: bold;
-    color: getColour(backgroundwhite);
+    color: getColour(textcoloursecondary);
     border-radius: 50%;
     text-align: center;
     padding: 1px 1px;
@@ -151,7 +158,8 @@ header {
         padding: 40px 55px;
     }
 
-    .nav {
+    .nav,
+    .logout__nav {
         min-width: 300px;
     }
 

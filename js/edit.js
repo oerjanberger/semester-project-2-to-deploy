@@ -32,9 +32,6 @@ if (!id) {
         const product = json.data
         populateEditPage(product)
 
-        pageTitle.innerHTML = "";
-        pageDescription.innerHTML = "";
-
         pageTitle.innerHTML = `Baby Bliss || Edit ${product.attributes.Title}`;
         pageDescription.innerHTML = `On this page you as an admin user can edit this product: ${product.attributes.Title}`;
 
@@ -54,7 +51,7 @@ const successMessage = document.querySelector(".message__container")
 
 const form = document.querySelector(".edit__product__form");
 form.addEventListener("submit", validateEditProductForm)
-form.addEventListener("click", resetMessage)
+form.addEventListener("keypress", resetMessage)
 
 function resetMessage() {
     successMessage.innerHTML = "";

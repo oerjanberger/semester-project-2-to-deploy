@@ -23,10 +23,6 @@ const pageDescription = document.querySelector(`meta[name="description"]`);
         const product = json.data
         renderProductDetails(product)
 
-
-        pageTitle.innerHTML = "";
-        pageDescription.innerHTML = "";
-
         pageTitle.innerHTML = `Baby Bliss || ${product.attributes.Title}`;
         pageDescription.innerHTML = `Product Title: ${product.attributes.Title} Product description ${product.attributes.Description}`;
 

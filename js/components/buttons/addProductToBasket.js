@@ -1,6 +1,4 @@
-import MESSAGES from "../../constants/messages.js";
 import { getProductFromBasket, saveToBasket } from "../../utils/storage.js";
-import displayMessage from "../common/displayMessage.js";
 import basketQuantityCounter from "../common/basketQuantityCounter.js";
 
 export default function addProductToBasket() {
@@ -35,14 +33,14 @@ export default function addProductToBasket() {
             currentProductsInBasket.push(thisProduct);
             saveToBasket(currentProductsInBasket);
 
-            modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" aria-label="shopping basket"></i>`;
+            modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" title="shopping basket"></i>`;
             modalMessage.innerHTML = `<p>1 x ${title} added to basket.</p>`;
         } else {
             const specificProduct = currentProductsInBasket.find((product) => {
                 return product.id === id;
             });
             specificProduct.quantity++;
-            modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" aria-label="shopping basket"></i>`;
+            modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" title="shopping basket"></i>`;
             modalMessage.innerHTML = `<p>1 x "${title}" added to basket.Now ${specificProduct.quantity} "${title}" in Basket</p>`;
             saveToBasket(currentProductsInBasket);
         };

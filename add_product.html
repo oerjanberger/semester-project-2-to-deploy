@@ -30,8 +30,8 @@
         <header>
             <div class="navbar__container">
                 <div class="nav__list__container">
-                    <label class="hamburger__label" for="hamburger__menu"><i class="fas fa-bars hamburger__label"
-                            aria-label="Navigation menu"></i></label>
+                    <label class="hamburger__label" for="hamburger__menu" tabindex="0" aria-label="Navigation menu"><i
+                            class="fas fa-bars hamburger__label" title="Navigation menu"></i></label>
                     <input type="checkbox" id="hamburger__menu" class="hamburger__menu__input">
                     <nav class="nav">
                     </nav>
@@ -46,6 +46,19 @@
         </header>
         <main>
             <section class="container">
+                <div class="modal__container">
+                    <div class="modal__content">
+                        <div class="modal__logo"></div>
+                        <hr>
+                        <div class="modal__message"></div>
+                        <div class="basket__btn__container">
+                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
+                                aria-label="cancel">Cancel</button>
+                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
+                                aria-label="confirm">Confirm</button>
+                        </div>
+                    </div>
+                </div>
                 <div class="content__wrapper">
                     <a href="products.html" class="all__products__link__container back_btn"><i
                             class="fas fa-angle-left back__arrow"></i>
@@ -86,25 +99,20 @@
                         </div>
                         <label>Featured</label>
                         <div class="featured__icon__container">
-                            <i class="fas fa-check-circle featured__yes featured__icon"></i>
-                            <i class="fas fa-times-circle featured__no featured__icon"></i>
+                            <i class="fas fa-check-circle featured__yes featured__icon" title="set featured to yes"
+                                tabindex="0"></i>
+                            <i class="fas fa-times-circle featured__no featured__icon" title="set featured to no"
+                                tabindex="0"></i>
                             <input type="checkbox" name="Featured" id="featured" class="featured__checkbox">
                         </div>
                         <button class="standard__cta__btn form__btn">Add product</button>
-                    </form>
-                </div>
-                <div class="modal__container">
-                    <div class="modal__content">
-                        <div class="modal__logo"></div>
-                        <hr>
-                        <div class="modal__message"></div>
-                        <div class="basket__btn__container">
-                            <button id="cancel__btn" class="standard__cta__btn edit__btn modal__btn"
-                                aria-label="cancel">Cancel</button>
-                            <button id="confirm__btn" class="standard__cta__btn modal__btn"
-                                aria-label="confirm">Confirm</button>
+                        <div class="sending__data">
+                            <img src="./logo/Stork_SVG.svg" alt="loading symbol"
+                                class="loading__symbol loading__symbol__one">
+                            <img src="./logo/flying_stork.svg" alt="loading symbol"
+                                class="loading__symbol loading__symbol__two">
                         </div>
-                    </div>
+                    </form>
                 </div>
             </section>
 
@@ -112,9 +120,9 @@
     </div>
     <footer>
         <div class="footer__social__container">
-            <i class="fab fa-instagram footer__social" aria-label="Baby Bliss instagram page"></i>
-            <i class="fab fa-facebook footer__social" aria-label="Baby Bliss facebook page"></i>
-            <i class="fab fa-twitter footer__social" aria-label="Baby Bliss twitter page"></i>
+            <i class="fab fa-instagram footer__social" title="Baby Bliss instagram page"></i>
+            <i class="fab fa-facebook footer__social" title="Baby Bliss facebook page"></i>
+            <i class="fab fa-twitter footer__social" title="Baby Bliss twitter page"></i>
         </div>
         <p>Copyright &copy; 2022 BabyBliss. All rights reserved</p>
     </footer>

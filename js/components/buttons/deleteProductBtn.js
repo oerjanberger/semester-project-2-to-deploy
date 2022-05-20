@@ -14,8 +14,11 @@ export default function deleteProductBtn() {
         const confirmBtn = document.querySelector("#confirm__btn");
 
         modalContainer.style.display = "block";
-        modalLogo.innerHTML = `<img src="logo/Logo_svg.svg" alt="Baby Bliss logo" class="nav__logo">`;
+        modalLogo.innerHTML = `<img src="logo/Logo_svg.svg" alt="Baby Bliss logo" class="nav__logo modal__logo">`;
         modalMessage.innerHTML = `<p>Please confirm that you want to delete this product</p>`;
+        (function getFocus() {
+            cancelBtn.focus();
+        })();
 
         confirmBtn.onclick = async function () {
             const productUrl = baseUrl + "products/" + id;

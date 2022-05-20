@@ -7,7 +7,7 @@ export default function renderFavorites() {
     const favorites = getProductFromFavorites();
     const favoritesContainer = document.querySelector(".favorite__grid");
     const favoriteMessage = document.querySelector(".message__container");
-    const clearFavoritesBtn = document.querySelector(".clear__favorites__btn")
+    const clearFavoritesBtn = document.querySelector(".clear__favorites__btn");
     const token = getToken();
 
 
@@ -23,13 +23,13 @@ export default function renderFavorites() {
         const favoritesId = parseFloat(product.id);
         if (token) {
             var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn">View product</button></a>
-                                <a href="edit.html?id=${product.id}"><button class="standard__cta__btn edit__btn">Edit product</button></a>`
+                                <a href="edit.html?id=${product.id}"><button class="standard__cta__btn edit__btn">Edit product</button></a>`;
         } else if (!token) {
-            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn">View product</button></a>`
-        }
+            var productButtons = `<a href="product_details.html?id=${product.id}"><button class="standard__cta__btn">View product</button></a>`;
+        };
 
         favoritesContainer.innerHTML += `<div class="product__card">
-        <div class="favorite__icon__container"><i class="fas fa-heart favorite__button" data-id="${favoritesId}" aria-label="remove ${product.title} from my favorites"></i></div>
+        <div class="favorite__icon__container"><i class="fas fa-heart favorite__button" tabindex="0" data-id="${favoritesId}" title="remove ${product.title} from my favorites"></i></div>
         <a href="product_details.html?id=${product.id}" class="product__card__info__container">
             <div class="product__img__container"><img src="${product.image}" alt="${product.alt}" class="product__image"></div>
             <div class="product__card__info">
@@ -42,6 +42,7 @@ export default function renderFavorites() {
     </div>
     </div>`;
     });
+
     clearFavoritesBtn.addEventListener("click", clearFavoritesFromStorage);
-    removeProductFromFavorites()
+    removeProductFromFavorites();
 };

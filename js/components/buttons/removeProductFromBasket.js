@@ -13,6 +13,8 @@ export default function removeProductFromBasket() {
 
     removeProductBtn.forEach((btn) => { btn.addEventListener("click", removeProduct) });
 
+
+
     function removeProduct() {
         const id = this.dataset.id;
         const currentProductsInBasket = getProductFromBasket();
@@ -22,8 +24,11 @@ export default function removeProductFromBasket() {
 
         if (productExists) {
             modalContainer.style.display = "block"
-            modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" aria-label="shopping basket"></i>`;
+            modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" title="shopping basket modal__basket"></i>`;
             modalMessage.innerHTML = `<p>Please confirm that you want to remove ${productExists.quantity} x ${productExists.title} from your basket</p>`;
+            (function getFocus() {
+                cancelBtn.focus();
+            })();
 
             confirmBtn.addEventListener("click", () => {
                 modalContainer.style.display = "none";
@@ -35,6 +40,11 @@ export default function removeProductFromBasket() {
             cancelBtn.addEventListener("click", () => {
                 modalContainer.style.display = "none";
             });
+            window.onclick = function (event) {
+                if (event.target === modalContainer) {
+                    modalContainer.style.display = "none";
+                }
+            }
 
         };
         basketQuantityCounter();

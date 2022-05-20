@@ -38,8 +38,11 @@ export function minusProduct() {
     } else if (thisProduct.quantity === 1) {
 
         modalContainer.style.display = "block";
-        modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" aria-label="shopping basket"></i>`;
+        modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" title="shopping basket"></i>`;
         modalMessage.innerHTML = `<p>Please confirm that you want to remove ${thisProduct.title} from your basket</p>`;
+        (function getFocus() {
+            cancelBtn.focus();
+        })();
 
         confirmBtn.addEventListener("click", () => {
             modalContainer.style.display = "none";

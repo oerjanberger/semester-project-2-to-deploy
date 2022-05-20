@@ -12,16 +12,16 @@
     font-weight: bold;
     font-size: 1.1rem;
     border: 2px solid getColour(primaryred);
-
-    @media(min-width: 720px) {
-        border: 2px solid getColour(primaryred);
-    }
 }
 
 .warning {
     margin-top: 0px;
-    padding: 0px;
-    color: getColour(primaryred);
+    padding: 5px;
+    padding-left: 15px;
+    color: getColour(textcoloursecondary);
+    background-color: getColour(highlightorange);
+    max-width: 300px;
+    border-radius: 20px;
 }
 
 .form__warning {
@@ -32,8 +32,14 @@
 .success {
     color: getColour(textcoloursecondary);
     background-color: getColour(secondaryturquoise);
+}
 
-    @media(min-width: 720px) {
+@media(min-width: 720px) {
+    .error {
+        border: 2px solid getColour(primaryred);
+    }
+
+    .success {
         font-size: 1.3rem;
         padding: 20px;
         text-align: center;

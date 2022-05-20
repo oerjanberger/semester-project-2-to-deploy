@@ -13,7 +13,8 @@
     align-items: center;
     border: 2px solid getColour(highlightorange);
     border-radius: 2px;
-    width: 150px;
+    background-color: getColour(backgroundwhite);
+    width: 160px;
     height: 40px;
     align-self: end;
     order: 1;
@@ -27,14 +28,14 @@
 
 .clear__favorites__btn {
     width: 200px;
+
 }
 
+.clear__favorites__btn p,
 .clearbtn p {
-    margin: 0px 10px 0px 10px;
-}
-
-.clear__favorites__btn p {
     margin: 0px 20px 0px 10px;
+    font-size: 1rem;
+    color: getColour(textcolourprimary);
 }
 
 .basket__grid {
@@ -53,6 +54,10 @@
     font-size: 1rem;
     align-self: center;
     justify-self: end;
+    background-color: getColour(backgroundwhite);
+    border: none;
+    padding: 5px;
+
 }
 
 .basket__info__container {
@@ -80,7 +85,7 @@
     margin: 0px;
 }
 
-.counter__icon {
+.counter__btn {
     border: 2px solid getColour(highlightorange);
     font-size: 0.7rem;
     align-self: center;
@@ -120,7 +125,7 @@ hr {
     gap: 15px;
 }
 
-.counter__icon:hover,
+.counter__btn:hover,
 .product__trash:hover,
 .clearbtn:hover {
     cursor: pointer;
@@ -135,7 +140,7 @@ hr {
     .product__trash,
     .sum__container p,
     .basket__info__container h5,
-    .counter__icon {
+    .counter__btn {
         font-size: 1.3rem;
     }
 
@@ -148,7 +153,7 @@ hr {
         height: 200px;
     }
 
-    .counter__icon {
+    .counter__btn {
         padding: 10px;
     }
 

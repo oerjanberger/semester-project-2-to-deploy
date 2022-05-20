@@ -12,6 +12,8 @@ export async function editProduct(title, description, price, alt, featured, id) 
     const editForm = document.querySelector(".edit__product__form");
     const currentImage = document.querySelector(".preview__img")
     const previewNewImgContainer = document.querySelector(".preview__new__img__container")
+    const sendingDataLoader = document.querySelector(".sending__data");
+    sendingDataLoader.style.display = "flex"
 
     const formData = new FormData(editForm);
     const body = new FormData();
@@ -39,6 +41,7 @@ export async function editProduct(title, description, price, alt, featured, id) 
         const json = await response.json();
         console.log(json)
         if (json.data.attributes.updatedAt) {
+            sendingDataLoader.style.display = "none"
             displayMessage("success", MESSAGES.productEdited, ".message__container");
             window.scrollTo(0, 0)
             const newProductImage = json.data.attributes.Image.data.attributes.url;
