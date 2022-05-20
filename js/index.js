@@ -14,7 +14,7 @@ createNav();
 setTimeout(function () {
     loadingHomePage.style.display = "none";
 },
-    3000);
+    5000);
 
 (async function getHomeBanner() {
     try {
@@ -22,6 +22,7 @@ setTimeout(function () {
         const response = await fetch(homeBannerUrl);
         const result = await response.json();
         loadingHeroBanner.style.display = "none";
+        loadingHomePage.style.display = "none";
         renderHeroBanner(result)
     }
     catch (error) {

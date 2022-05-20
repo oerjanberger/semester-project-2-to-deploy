@@ -7,9 +7,9 @@ export default async function addNewProduct(title, description, price, image, al
     const url = baseUrl + "products?populate=*";
     const data = JSON.stringify({ Title: title, Description: description, Price: price, Image_alt_text: alt, Featured: featured })
     const token = getToken();
-    console.log(token)
     const addProductForm = document.querySelector(".add__product__form");
-    console.log(image)
+    const sendingDataLoader = document.querySelector(".sending__data");
+    sendingDataLoader.style.display = "flex";
 
     const formData = new FormData();
     formData.append("files.Image", image, image.name);
@@ -25,11 +25,13 @@ export default async function addNewProduct(title, description, price, image, al
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json)
+
+
         if (json.data.attributes.createdAt) {
             displayMessage("success", MESSAGES.productCreated, ".message__container");
             addProductForm.reset();
             window.scrollTo(0, 0)
+            sendingDataLoader.style.display = "none";
         }
         if (json.data.attributes.error) {
             console.log(json.data.attributes.message)

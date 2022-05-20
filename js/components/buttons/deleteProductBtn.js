@@ -34,7 +34,7 @@ export default function deleteProductBtn() {
             try {
                 const response = await fetch(productUrl, options);
                 const json = await response.json();
-                location.href = "/";
+                location.href = "/products.html";
                 console.log(json);
 
                 const currentProductsInBasket = getProductFromBasket();

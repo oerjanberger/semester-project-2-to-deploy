@@ -11,13 +11,16 @@ export default function logout() {
     if (logoutBtn) {
         logoutBtn.forEach((btn) => { btn.addEventListener("click", confirmLogout) });
     };
-
-    //Added for accessibility
-    altLogoutBtn.onkeyup = function (event) {
-        if (event.keyCode === 13) {
-            confirmLogout();
+    if (altLogoutBtn) {
+        // Added for accessibility
+        altLogoutBtn.onkeyup = function (event) {
+            if (event.keyCode === 13) {
+                confirmLogout();
+            }
         }
     }
+
+
 
     function confirmLogout() {
         modalContainer.style.display = "block";
