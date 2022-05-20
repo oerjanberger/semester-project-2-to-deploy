@@ -1262,9 +1262,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .product__detail__info .product__detail__price {
   min-width: 85px;
   place-self: end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .product__details__image {
@@ -1284,10 +1281,6 @@ input[type="search"]::-webkit-search-cancel-button {
   cursor: pointer;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-.product__details__btn {
-  width: 100%;
 }
 
 @media (min-width: 720px) {
@@ -1321,6 +1314,10 @@ input[type="search"]::-webkit-search-cancel-button {
     font-size: 1.4rem;
   }
   .product__detail__grid .product__details__btn {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
     height: 50px;
   }
   .product__detail__grid .product__details__btn__container {
