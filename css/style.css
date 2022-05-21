@@ -524,7 +524,7 @@ footer p {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .minibasket__modal__container {
     display: none;
     width: 400px;
@@ -1526,6 +1526,10 @@ hr {
 }
 
 @media (min-width: 720px) {
+  .basket__container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .product__trash,
   .sum__container p,
   .basket__info__container h5,
