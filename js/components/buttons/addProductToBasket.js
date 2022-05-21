@@ -41,7 +41,7 @@ export default function addProductToBasket() {
             });
             specificProduct.quantity++;
             modalLogo.innerHTML = `<i class="fas fa-shopping-bag modal__basket" title="shopping basket"></i>`;
-            modalMessage.innerHTML = `<p>1 x "${title}" added to basket.Now ${specificProduct.quantity} "${title}" in Basket</p>`;
+            modalMessage.innerHTML = `<p>1 x "${title}" added to basket. Now ${specificProduct.quantity} "${title}" in Basket</p>`;
             saveToBasket(currentProductsInBasket);
         };
 
