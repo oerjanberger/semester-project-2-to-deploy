@@ -50,6 +50,7 @@ export function minusProduct() {
             saveToBasket(updatedBasket);
             renderBasket();
             renderModalBasket();
+            basketQuantityCounter();
         });
 
         cancelBtn.addEventListener("click", () => {
