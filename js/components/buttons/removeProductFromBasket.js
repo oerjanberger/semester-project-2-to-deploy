@@ -36,6 +36,7 @@ export default function removeProductFromBasket() {
                 saveToBasket(updatedBasket);
                 renderBasket();
                 renderModalBasket()
+                basketQuantityCounter();
             });
             cancelBtn.addEventListener("click", () => {
                 modalContainer.style.display = "none";
