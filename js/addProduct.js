@@ -1,6 +1,6 @@
-import createNav from "./components/common/createNav.js";
+import createNav from "./components/common/nav/createNav.js";
 import setToFeatured from "./components/buttons/setToFeatured.js"
-import validateAddProductForm from "./components/forms/validateAddProductForm.js";
+import validateAddProductForm from "./components/forms/addProductFunctions/validateAddProductForm.js";
 
 createNav();
 setToFeatured();

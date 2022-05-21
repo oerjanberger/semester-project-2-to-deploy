@@ -1,0 +1,57 @@
+.container {
+    max-width: 1000px;
+    padding: 0px 40px;
+    margin: 0 auto;
+}
+
+.content__wrapper,
+.content__wrapper__index {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.content__wrapper {
+    margin-top: 130px;
+}
+
+.heading__container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.index__heading__container {
+    justify-self: center;
+}
+
+.about__grid,
+.heading__clearbtn__container,
+.preview__img__container,
+.preview__new__img__container,
+.login__form,
+.add__product__form,
+.input__container,
+.filter__form {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 720px) and (max-width: 1000px) {
+    .container {
+        padding: 0px;
+    }
+
+    .heading__container {
+        width: 630px;
+    }
+}
+
+@media(min-width: 1001px) {
+    .container {
+        padding: 0px;
+    }
+
+    .heading__container {
+        width: 987px;
+        margin: 0;
+    }
+}

@@ -1,7 +1,7 @@
 import MESSAGES from "../../constants/messages.js";
 import displayMessage from "../common/displayMessage.js";
 import { getToken, getProductFromFavorites } from "../../utils/storage.js";
-import addProductToFavorites from "../buttons/addProductToFavorites.js";
+import addProductToFavorites from "../buttons/favoritesButtons/addProductToFavorites.js";
 
 export default function renderFeatured(products) {
     if (products.length === 0) {

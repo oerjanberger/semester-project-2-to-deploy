@@ -1,5 +1,5 @@
 import { baseUrl } from "./data/api.js";
-import createNav from "./components/common/createNav.js";
+import createNav from "./components/common/nav/createNav.js";
 import renderProducts from "./components/renderHtml/renderProducts.js";
 import MESSAGES from "./constants/messages.js";
 import displayMessage from "./components/common/displayMessage.js";

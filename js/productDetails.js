@@ -1,4 +1,4 @@
-import createNav from "./components/common/createNav.js";
+import createNav from "./components/common/nav/createNav.js";
 import { baseUrl } from "./data/api.js";
 import displayMessage from "./components/common/displayMessage.js";
 import MESSAGES from "./constants/messages.js";

@@ -1,7 +1,8 @@
 import MESSAGES from "../../constants/messages.js";
 import displayMessage from "../common/displayMessage.js";
-import { getToken, getProductFromFavorites, clearFavoritesFromStorage } from "../../utils/storage.js";
-import removeProductFromFavorites from "../buttons/removeProductFromFavorites.js";
+import { getToken, getProductFromFavorites } from "../../utils/storage.js";
+import { clearFavoritesFromStorage } from "../modals/clearFavoritesFromStorage.js"
+import removeProductFromFavorites from "../buttons/favoritesButtons/removeProductFromFavorites.js";
 
 export default function renderFavorites() {
     const favorites = getProductFromFavorites();

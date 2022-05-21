@@ -1,6 +1,6 @@
 import { getProductFromFavorites, getToken } from "../../utils/storage.js";
-import addProductToFavorites from "../buttons/addProductToFavorites.js";
-import addProductToBasket from "../buttons/addProductToBasket.js";
+import addProductToFavorites from "../buttons/favoritesButtons/addProductToFavorites.js";
+import addProductToBasket from "../buttons/basketButtons/addProductToBasket.js";
 import imageModal from "../modals/imageModal.js";
 
 export default function renderProductDetails(product) {

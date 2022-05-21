@@ -1,5 +1,5 @@
-import createNav from "./components/common/createNav.js";
-import submitLogin from "./components/forms/submitLogin.js"
+import createNav from "./components/common/nav/createNav.js";
+import submitLogin from "./components/forms/loginFunctions/submitLogin.js"
 
 createNav();
 

@@ -47,10 +47,6 @@
     right: 15px;
 }
 
-.close__btn {
-    font-size: 2.5rem;
-}
-
 .close:hover {
     cursor: pointer;
 }
@@ -78,6 +74,7 @@
     }
 }
 
+// Only show on desktop sized screens
 @media(min-width: 1200px) {
     .minibasket__modal__container {
         display: none;

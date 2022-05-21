@@ -1,41 +1,5 @@
-.heading__clearbtn__container {
-    display: flex;
-    flex-direction: column;
-}
-
 .heading__clearbtn__container h1 {
     order: 2;
-}
-
-.clearbtn,
-.clear__favorites__btn {
-    display: flex;
-    align-items: center;
-    border: 2px solid getColour(highlightorange);
-    border-radius: 2px;
-    background-color: getColour(backgroundwhite);
-    width: 160px;
-    height: 40px;
-    align-self: end;
-    order: 1;
-}
-
-.clearbtn:hover,
-.clear__favorites__btn:hover {
-    cursor: pointer;
-    box-shadow: 3px 3px 3px getColour(primaryred);
-}
-
-.clear__favorites__btn {
-    width: 200px;
-
-}
-
-.clear__favorites__btn p,
-.clearbtn p {
-    margin: 0px 20px 0px 10px;
-    font-size: 1rem;
-    color: getColour(textcolourprimary);
 }
 
 .basket__grid {
@@ -57,7 +21,6 @@
     background-color: getColour(backgroundwhite);
     border: none;
     padding: 5px;
-
 }
 
 .basket__info__container {
@@ -83,13 +46,6 @@
     font-size: 0.7rem;
     justify-self: end;
     margin: 0px;
-}
-
-.counter__btn {
-    border: 2px solid getColour(highlightorange);
-    font-size: 0.7rem;
-    align-self: center;
-    padding: 5px;
 }
 
 .count__container {
@@ -125,15 +81,6 @@ hr {
     gap: 15px;
 }
 
-.counter__btn:hover,
-.product__trash:hover,
-.clearbtn:hover {
-    cursor: pointer;
-}
-
-.clearbtn:hover {
-    box-shadow: 2px 2px 2px getColour(primaryred);
-}
 
 @media(min-width: 720px) {
     .basket__container {
@@ -143,8 +90,7 @@ hr {
 
     .product__trash,
     .sum__container p,
-    .basket__info__container h5,
-    .counter__btn {
+    .basket__info__container h5 {
         font-size: 1.3rem;
     }
 
@@ -155,10 +101,6 @@ hr {
     .basket__img {
         width: 200px;
         height: 200px;
-    }
-
-    .counter__btn {
-        padding: 10px;
     }
 
     .basket__btn__container {

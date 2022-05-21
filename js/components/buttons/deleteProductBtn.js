@@ -62,5 +62,11 @@ export default function deleteProductBtn() {
         cancelBtn.addEventListener("click", () => {
             modalContainer.style.display = "none";
         });
+
+        window.onclick = function (event) {
+            if (event.target === modalContainer) {
+                modalContainer.style.display = "none";
+            }
+        }
     };
 };

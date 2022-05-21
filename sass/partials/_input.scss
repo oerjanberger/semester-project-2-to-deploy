@@ -1,6 +1,4 @@
 .filter__form {
-    display: flex;
-    flex-direction: column;
     margin-bottom: 40px;
 }
 
@@ -53,10 +51,6 @@ input[type=file]::file-selector-button:hover {
     cursor: pointer;
     background-color: getColour(secondaryturquoise);
     font-weight: bold;
-}
-
-input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
 }
 
 @media(min-width: 720px) {

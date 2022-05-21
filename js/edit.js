@@ -1,9 +1,9 @@
 import { baseUrl } from "./data/api.js";
-import createNav from "./components/common/createNav.js";
+import createNav from "./components/common/nav/createNav.js";
 import setToFeatured from "./components/buttons/setToFeatured.js"
-import validateEditProductForm from "./components/forms/validateEditProductForm.js";
-import { populateEditPage } from "./components/forms/populateEditPage.js";
-import uploadImage from "./components/forms/uploadImage.js";
+import validateEditProductForm from "./components/forms/editProductFunctions/validateEditProductForm.js";
+import { populateEditPage } from "./components/forms/editProductFunctions/populateEditPage.js";
+import uploadImage from "./components/forms/editProductFunctions/uploadImage.js";
 import displayMessage from "./components/common/displayMessage.js";
 import MESSAGES from "./constants/messages.js";
 import deleteProductBtn from "./components/buttons/deleteProductBtn.js";

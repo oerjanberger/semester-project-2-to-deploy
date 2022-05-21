@@ -1,9 +1,9 @@
 import MESSAGES from "../../constants/messages.js"
 import { getProductFromBasket } from "../../utils/storage.js";
 import displayMessage from "../common/displayMessage.js";
-import { plusProduct, minusProduct } from "../buttons/adjustQuantity.js";
-import { clearBasketFromStorage } from "../../utils/storage.js";
-import removeProductFromBasket from "../buttons/removeProductFromBasket.js";
+import { plusProduct, minusProduct } from "../buttons/basketButtons/adjustQuantity.js";
+import { clearBasketFromStorage } from "../modals/clearBasketFromStorage.js";
+import removeProductFromBasket from "../buttons/basketButtons/removeProductFromBasket.js";
 
 export default function renderBasket() {
     const basket = getProductFromBasket();

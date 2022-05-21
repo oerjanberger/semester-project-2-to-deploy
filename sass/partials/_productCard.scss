@@ -37,13 +37,11 @@
     font-size: 0.9rem;
 }
 
-
 .button__container {
     display: grid;
     grid-template-rows: repeat(2, auto);
     gap: 10px;
 }
-
 
 .favorite__button:hover {
     cursor: pointer;
