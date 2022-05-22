@@ -5,7 +5,6 @@ import MESSAGES from "./constants/messages.js";
 import displayMessage from "./components/common/displayMessage.js";
 import filterProducts from "./components/search/filterProducts.js";
 
-
 let count = 1;
 let totalPages = 0;
 const previousPage = document.querySelector(".fa-chevron-left")
@@ -17,6 +16,7 @@ createNav();
 
 async function getAllProducts() {
     const productUrl = `${baseUrl}products?pagination[page]=${count}&pagination[pageSize]=12&populate=*`;
+
     try {
         const response = await fetch(productUrl);
         const result = await response.json();

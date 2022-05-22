@@ -14,6 +14,12 @@ export async function editProduct(title, description, price, alt, featured, id) 
     const previewNewImgContainer = document.querySelector(".preview__new__img__container")
     const sendingDataLoader = document.querySelector(".sending__data");
     sendingDataLoader.style.display = "flex"
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    const date = year + "-" + month + "-" + day;
+    console.log(date)
 
     const formData = new FormData(editForm);
     const body = new FormData();
@@ -39,8 +45,8 @@ export async function editProduct(title, description, price, alt, featured, id) 
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-        console.log(json)
-        if (json.data.attributes.updatedAt) {
+        console.log(json.data.attributes.updatedAt)
+        if (json.data.attributes.updatedAt.includes(date)) {
             sendingDataLoader.style.display = "none"
             displayMessage("success", MESSAGES.productEdited, ".message__container");
             window.scrollTo(0, 0)

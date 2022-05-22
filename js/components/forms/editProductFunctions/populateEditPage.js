@@ -18,7 +18,7 @@ export function populateEditPage(product) {
 
     title.value = productTitle;
     description.value = productDescription;
-    price.value = parseFloat(productPrice);
+    price.value = parseFloat(productPrice).toFixed(2);
     imageAlt.value = productImageAlt;
     featuredInput.checked = featured;
 

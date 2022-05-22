@@ -46,10 +46,13 @@
         align-self: center;
         padding-bottom: 10px;
     }
+
+    p {
+        color: getColour(textcolourprimary);
+    }
 }
 
 .all__products__link__container:hover {
-
     .logo_btn {
         max-width: 60px;
     }

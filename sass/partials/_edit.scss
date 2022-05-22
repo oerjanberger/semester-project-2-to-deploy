@@ -36,6 +36,10 @@
     color: getColour(textcolourprimary);
 }
 
+.verify__btn__text {
+    color: getColour(textcolourprimary);
+}
+
 @media(min-width: 1000px) {
     .edit__img__container {
         display: grid;
